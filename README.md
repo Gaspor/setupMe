@@ -1,6 +1,10 @@
 # setupMe
 - Projeto da faculdade, o objetivo do trabalho é a criação de um site para montagem de computadores, usando as matérias vistas no semestre.
 
+## Requisitos:
+ - Node 14.16.1
+ - PostgreSQL 13
+
 ## :computer: Programadores:
   - :speech_balloon: Victor Amaral: [:computer: Github](https://github.com/Fri5Day)
 
