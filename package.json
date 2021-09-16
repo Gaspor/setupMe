@@ -1,0 +1,22 @@
+{
+  "name": "setupme",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gaspor/setupMe.git"
+  },
+  "author": "Gaspor",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gaspor/setupMe/issues"
+  },
+  "homepage": "https://github.com/Gaspor/setupMe#readme",
+  "dependencies": {
+    "dotenv": "^10.0.0"
+  }
+}
