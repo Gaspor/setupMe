@@ -1,0 +1,227 @@
+/* Global ============================================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+body {
+    background: white;
+}
+
+main {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Header ============================================================ */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    width: 100%;
+    height: 4.3rem;
+    box-shadow: 0 0 0.5rem 0 rgba(0,0,0,1);
+}
+
+.menu {
+    font-size: 1.3rem;
+    width: 100%;
+    height: 1.3rem;
+    margin-bottom: 0.6rem;
+}
+
+.menu ul {
+    list-style: none;
+    position: relative;
+    background: white;
+    border-radius: 7px;
+}
+
+.menu ul li {
+    width: 150px;
+}
+
+.menu a {
+    padding: 17px;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    border: 1px solid black;
+    border-bottom: none;
+    border-top: none;
+}
+
+.menu a:first-child {
+    border-top: 1px solid black;
+    border-bottom: none;
+}
+
+.menu a:last-child {
+    border-bottom: 1px solid black;
+    border-top: none;
+}
+
+.menu ul ul {
+    position: absolute;
+    visibility: hidden;
+}
+
+.menu ul li:hover ul{
+    visibility: visible;
+}
+
+.menu a:hover {
+    background-color: #fff;
+}
+ 
+.logo {
+    margin: 1.1rem;
+}
+
+.input-pesquisa {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input {
+    margin: 2.5rem;
+    border-radius: 2.5rem;
+    height: 1.4rem;
+}
+
+/* Carousel =======================================================*/
+
+.slider {
+    width: 100%;
+    height: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 5.5rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+
+.slides {
+    width: 500%;
+    height: 500px;
+    display: flex;
+}
+
+.slides input {
+    display: none;
+}
+
+.slide {
+    width: 20%;
+    transition: 2s;
+}
+
+.slide img {
+    width: 100%;
+    height: 500px;
+}
+
+.navigation-manual{
+    position: absolute;
+    width: 800px;
+    margin-top: 32.5rem;
+    margin-left: 15rem;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn{
+    border: 2px solid rgb(83, 79, 79);
+    padding: 0.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.manual-btn:not(:last-child){
+    margin-right: 1rem;
+}
+
+.manual-btn:hover {
+    background: gray;
+}
+
+#radio1:checked ~ .first {
+    margin-left: 0;
+}
+#radio2:checked ~ .first {
+    margin-left: -20%;
+}
+#radio3:checked ~ .first {
+    margin-left: -40%;
+}
+#radio4:checked ~ .first {
+    margin-left: -60%;
+}
+
+.navigation-auto {
+    position: absolute;
+    display: flex;
+    width: 800px;
+    justify-content: center;
+    margin-top: 32.5rem;
+    margin-left: 15rem;
+}
+
+.navigation-auto div {
+    border: 2px solid;
+    padding: 0.5rem;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+.navigation-auto div:not(:last-child) {
+    margin-right: 1rem;
+}
+
+#radio1:checked ~ .navigation-auto .auto.btn1 {
+    background: gray;
+}
+
+#radio2:checked ~ .navigation-auto .auto.btn2 {
+    background: gray;
+}
+
+#radio3:checked ~ .navigation-auto .auto.btn3 {
+    background: gray;
+}
+
+#radio4:checked ~ .navigation-auto .auto.btn4 {
+    background: gray;
+}
+
+/* Barra de pesquisa ==================================================== */
+
+.search-txt {
+    border: 1px solid;
+    border-width: thin;
+    background: none;
+    outline: none;
+    padding: 0;
+    color: black;
+    font-size: 16px;
+}
+
+.search-btn {
+    border-radius: 50%;
+}
+
+.search-img {
+    position: relative;
+    right: 4rem;
+    top: 0.1rem;
+}
