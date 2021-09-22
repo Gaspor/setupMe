@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Gaspor/setupMe#readme",
   "dependencies": {
-    "dotenv": "^10.0.0"
+    "dotenv": "^10.0.0",
+    "pg": "^8.7.1"
   }
 }
