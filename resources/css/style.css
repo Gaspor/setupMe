@@ -13,7 +13,7 @@ body {
 main {
     margin: 0;
     padding: 0;
-    height: 100vh;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -41,7 +41,7 @@ header {
     list-style: none;
     position: relative;
     background: white;
-    border-radius: 7px;
+    border-radius: 0.4rem;
 }
 
 .menu ul li {
@@ -76,10 +76,12 @@ header {
 
 .menu ul li:hover ul{
     visibility: visible;
+    box-shadow: 0.2rem 0.2rem 0.2rem 0.2rem rgba(0,0,0,0.3);
 }
 
 .menu a:hover {
-    background-color: #fff;
+    background-color: #DFDFDF;
+    transition: 0.5s;
 }
  
 .logo {
@@ -106,14 +108,15 @@ input {
     border-radius: 10px;
     overflow: hidden;
     margin-bottom: 5.5rem;
-    margin-left: 3rem;
-    margin-right: 3rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
 }
 
 .slides {
     width: 500%;
-    height: 500px;
+    height: 800px;
     display: flex;
+    margin-top: 3rem;
 }
 
 .slides input {
@@ -133,10 +136,11 @@ input {
 .navigation-manual{
     position: absolute;
     width: 800px;
-    margin-top: 32.5rem;
+    margin-top: 30rem;
     margin-left: 15rem;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .manual-btn{
@@ -152,7 +156,7 @@ input {
 }
 
 .manual-btn:hover {
-    background: gray;
+    background: black;
 }
 
 #radio1:checked ~ .first {
@@ -173,7 +177,7 @@ input {
     display: flex;
     width: 800px;
     justify-content: center;
-    margin-top: 32.5rem;
+    margin-top: 30rem;
     margin-left: 15rem;
 }
 
@@ -224,4 +228,8 @@ input {
     position: relative;
     right: 4rem;
     top: 0.1rem;
+}
+
+.search-txt:hover {
+    box-shadow: 0.2rem 0.2rem 0.2rem 0.2rem rgba(0,0,0,0.2);
 }
