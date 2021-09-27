@@ -6,12 +6,12 @@
  - PostgreSQL 13
 
 ## :computer: Programadores:
-  - :speech_balloon: Victor Amaral: [:computer: Github](https://github.com/Fri5Day)
+  - :speech_balloon: Victor Amaral: [:computer: Github](https://github.com/Fri5Day)(Backend)
 
-  - :speech_balloon: Ramon Costa: [:computer: Github](https://github.com/Gaspor)
+  - :speech_balloon: Ramon Costa: [:computer: Github](https://github.com/Gaspor)(Backend)
 
-  - :speech_balloon: Lucas Filgueiras: [:computer: Github](https://github.com/LucasFilgueiras)
+  - :speech_balloon: Lucas Filgueiras: [:computer: Github](https://github.com/LucasFilgueiras)(Frontend)
 
-  - :speech_balloon: Felipe Verneck: [:computer: Github](https://github.com/FelipeVerneck)
+  - :speech_balloon: Felipe Verneck: [:computer: Github](https://github.com/FelipeVerneck)(Frontend)
 
-  - :speech_balloon: Maxsuel: [:computer: Github](https://github.com/X86Max)
+  - :speech_balloon: Maxsuel: [:computer: Github](https://github.com/X86Max)(Frontend)
