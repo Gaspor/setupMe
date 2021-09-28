@@ -38,6 +38,11 @@ header {
     border-top: none;
 }
 
+.menu img:hover {
+    animation: headShake;
+    animation-duration: 2s;
+}
+
 .menu a:first-child {
     border-top: 1px solid black;
     border-bottom: none;

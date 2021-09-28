@@ -41,7 +41,7 @@
     animation: slide 45s infinite ease-in-out;
 }
 
-img:hover {
+.slide img:hover {
     zoom: 105%;
 }
 
