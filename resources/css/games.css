@@ -10,13 +10,119 @@
 
 .container {
     display: flex;
-    overflow: hidden;
     justify-content: space-between;
-    margin: 8rem 2rem;
+    margin-left: 4rem;
+    position: relative;
+    overflow: hidden;
+    margin-right: 4rem;
+    margin-top: 3rem;
 }
 
 .titulo {
     display: flex;
     justify-content: center;
-    margin-top: 3rem;
+    margin-top: 1rem;
 }
+
+.slider {
+    display: flex;
+    width: 2500px;
+    height: 400px;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+}
+
+.slider img {
+    margin-right: 5rem;
+}
+
+.slide {
+    position: relative;
+    animation: slide 45s infinite ease-in-out;
+}
+
+img:hover {
+    zoom: 110%;
+}
+
+@keyframes slide {
+    0%{
+        left: 0px;
+    }
+
+    5% {
+        left: 0px;
+    }
+
+    10% {
+        left: -250px;
+    }
+
+    20%{
+        left: -500px;
+    }
+    30%{
+        left: -750px;
+    }
+    40%{
+        left: -1000px;
+    }
+    50%{
+        left: -1250px;
+    }
+    60%{
+        left: -1500px;
+    }
+    70%{
+        left: -1750px;
+    }
+    80%{
+        left: -2000px;
+    }
+
+    90%{
+        left: -2250px;
+    }
+}
+
+/*
+.fortnite {
+    margin-top: -4rem;
+}
+.gtav {
+    margin-top: -4rem;
+    margin-left: 7rem;
+}
+.apex {
+    margin-top: -4rem;
+    margin-left: 7rem;
+}
+.lol {
+    margin-top: 9rem;
+    margin-left: -50rem;
+}
+.valorant {
+    margin-top: 9rem;
+    margin-left: 8rem;
+}
+.csgo {
+    margin-top: -4rem;
+    margin-left: 35rem;
+}
+.minecraft {
+    margin-top: -4rem;
+    margin-left: 8rem;
+}
+.fifa21 {
+    margin-top: -4rem;
+    margin-left: 8rem;
+}
+.warzone {
+    margin-top: 9rem;
+    margin-left: -51rem;
+}
+.dota2 {
+    margin-top: 9rem;
+    margin-left: 8rem;
+}
+*/
