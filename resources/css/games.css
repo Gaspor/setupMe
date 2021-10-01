@@ -11,10 +11,10 @@
 .container {
     display: flex;
     justify-content: space-between;
-    margin-left: 4rem;
+    margin-left: 6rem;
     position: relative;
     overflow: hidden;
-    margin-right: 4rem;
+    margin-right: 6rem;
     margin-top: 3rem;
 }
 
@@ -45,6 +45,21 @@
     zoom: 105%;
 }
 
+/* setas =================================== */
+
+.right-arrow img {
+    display: flex;
+    margin-right: 3rem;
+    margin-top: -15rem;
+}
+
+.left-arrow img {
+    display: flex;
+    margin-left: 1.5rem;
+    margin-top: -3.1rem;
+}
+
+/* animações ============================= */
 @keyframes slide {
     0%{
         left: 0px;
@@ -84,45 +99,3 @@
         left: -2250px;
     }
 }
-
-/*
-.fortnite {
-    margin-top: -4rem;
-}
-.gtav {
-    margin-top: -4rem;
-    margin-left: 7rem;
-}
-.apex {
-    margin-top: -4rem;
-    margin-left: 7rem;
-}
-.lol {
-    margin-top: 9rem;
-    margin-left: -50rem;
-}
-.valorant {
-    margin-top: 9rem;
-    margin-left: 8rem;
-}
-.csgo {
-    margin-top: -4rem;
-    margin-left: 35rem;
-}
-.minecraft {
-    margin-top: -4rem;
-    margin-left: 8rem;
-}
-.fifa21 {
-    margin-top: -4rem;
-    margin-left: 8rem;
-}
-.warzone {
-    margin-top: 9rem;
-    margin-left: -51rem;
-}
-.dota2 {
-    margin-top: 9rem;
-    margin-left: 8rem;
-}
-*/

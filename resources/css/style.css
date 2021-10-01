@@ -92,7 +92,7 @@ main {
 }
 
 .navigation-auto {
-    position: absolute;
+    position: relative;
     display: flex;
     width: 800px;
     justify-content: center;
