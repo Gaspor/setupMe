@@ -1,3 +1,9 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 header {
     display: flex;
     align-items: center;
@@ -108,4 +114,16 @@ input {
 
 .search-txt:hover {
     box-shadow: 0.2rem 0.2rem 0.2rem 0.2rem rgba(0,0,0,0.2);
+}
+
+@media (max-width: 600px) {
+    .logo img{
+        width: 100px;
+    }
+    .menu img{
+        width: 100px;
+    }
+    .search-box {
+        visibility: hidden;
+    }
 }
