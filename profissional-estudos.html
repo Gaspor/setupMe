@@ -41,47 +41,45 @@
         </div>
     </header>
 
-    <head>
-        <main>
-            <div class="opcoes">
-                <div class="caixas">
-                    <div id="box1">
-                        <center>
-                            <h3>BÁSICO</h3>
-                        </center>
-                        <img class="basico" src="./resources/images/office.png" width="300px" height="150px">
-                        <input type="radio" id="basico" name="seleção" value="basico">
-                        <center><label for="basico">Selecionar</label></center>
-                        <p>Recomendado em uso de pacote Office (Excel, Word, Power Point, etc), navgador e extensões em
-                            geral, como o PDF.</p>
-                    </div>
-                    <div id="box2">
-                        <center>
-                            <h3>MÉDIO</h3>
-                        </center>
-                        <img class="medio" src="./resources/images/programaçao.png" width="300px" height="150px">
-                        <input type="radio" id="medio" name="seleção" value="medio">
-                        <center><label for="medio">Selecionar</label></center>
-                        <p>Recomendado em uso de programação (C++, Java, JavaScript, etc), Photoshop e programas para
-                            desenvolvimento em geral.</p>
-                    </div>
-                    <div id="box3">
-                        <center>
-                            <h3>AVANÇADO</h3>
-                        </center>
-                        <img class="avançado" src="./resources/images/editor-de-video.png" width="300px" height="150px">
-                        <input type="radio" id="avançado" name="seleção" value="avançado">
-                        <center><label for="avançado">Selecionar</label></center>
-                        <p>Recomendado em programas de edições de vídeo (Sony Vegas, DaVinci Resolve, etc),
-                            processamento de imagem (CorelDraw, 3DSMax, etc).</p>
-                    </div>
-                    <center><a href="#" class="button">MONTAR</a>
+    <main>
+        <div class="opcoes">
+            <div class="caixas">
+                <div id="box1">
+                    <center>
+                        <h3>BÁSICO</h3>
+                    </center>
+                    <img class="basico" src="./resources/images/office.png" width="300px" height="150px">
+                    <input class="buttons" type="radio" id="basico" name="seleção" value="basico">
+                    <center><label for="basico">Selecionar</label></center>
+                    <p>Recomendado em uso de pacote Office (Excel, Word, Power Point, etc), navgador e extensões em
+                        geral, como o PDF.</p>
                 </div>
-                </center>
+                <div id="box2">
+                    <center>
+                        <h3>MÉDIO</h3>
+                    </center>
+                    <img class="medio" src="./resources/images/programaçao.png" width="300px" height="150px">
+                    <input class="buttons" type="radio" id="medio" name="seleção" value="medio">
+                    <center><label for="medio">Selecionar</label></center>
+                    <p>Recomendado em uso de programação (C++, Java, JavaScript, etc), Photoshop e programas para
+                        desenvolvimento em geral.</p>
+                </div>
+                <div id="box3">
+                    <center>
+                        <h3>AVANÇADO</h3>
+                    </center>
+                    <img class="avançado" src="./resources/images/editor-de-video.png" width="300px" height="150px">
+                    <input class="buttons" type="radio" id="avançado" name="seleção" value="avançado">
+                    <center><label for="avançado">Selecionar</label></center>
+                    <p>Recomendado em programas de edições de vídeo (Sony Vegas, DaVinci Resolve, etc),
+                        processamento de imagem (CorelDraw, 3DSMax, etc).</p>
+                </div>
+                <center><a href="#" class="button" onclick="checkBasico(), checkMedio(), checkAvancado()">MONTAR</a>
             </div>
+        </div>
+    </main>
 
-            </div>
-        </main>
+    <script src="./resources/js/profissional-estudos.js"></script>
 </body>
 
 </html>
