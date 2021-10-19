@@ -20,11 +20,16 @@ main {
 }
 
 /* caixa de montagem */ 
-#box1 {
-    position: absolute;
-    top: 90px;
-    left: 34px;
+#caixa {    
+    display: flex;
+    justify-content: row;
+    position: relative;
+    overflow: hidden;
+    margin-right: 6rem;
+    margin-top: 2rem;
+    left: 40px;
     border-radius: 2px;
+    flex-direction: row;
     background: #fdfdfdda;
     padding: 20px; 
     width: 350px;
@@ -32,61 +37,72 @@ main {
     box-shadow: 1px 1px 1px 2px rgba(0, 0, 0, 0.274);
   }
 
-#box2 {
-    position: center;
-    margin-top: 20px;
-    border-radius: 2px;
-    background: #fdfdfdda;
-    padding: 20px; 
-    width: 350px;
-    height: 400px;  
-    box-shadow: 1px 1px 1px 2px rgba(0, 0, 0, 0.274);
-}
+  #caixa h3{
+      display: flex;
+      justify-content: center;
+      margin-left: 7.5rem;
+  }
 
-  #box3 {
-    position: absolute;
-    top: 90px;
-    right: 34px;
-    border-radius: 2px;
-    background: #fdfdfdda;
-    padding: 20px; 
-    width: 350px;
-    height: 400px;  
-    box-shadow: 1px 1px 1px 2px rgba(0, 0, 0, 0.274);
-  } 
-/* posição do radio button */
-  input[id="basico"]{ 
-      position:fixed; 
-      margin: 0px;
-      left: 10.5%;
-      top: 297px;
-}
+  #caixa img{
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    margin-left: -9.5rem;
+  }
 
-input[id="medio"]{ 
-    position:fixed; 
-    margin: 0px;
-    left: 45%;
-    top: 297px;
-}
+  #caixa .medio{
+    display: flex;
+    justify-content: center;
+    margin-left: -10rem;
+  }
 
-input[id="avançado"]{ 
-    position:fixed; 
-    margin: 0px;
-    left: 79.7%;
-    top: 297px;
-}
+  #caixa .tituloavançado{
+    display: flex;
+    justify-content: center;
+    margin-left: 7.5rem;
+  }
+
+  #caixa .avançado{
+    display: flex;
+    justify-content: center;
+    margin-left: -13rem;
+  }
+
+  #caixa input{
+      display: flex;
+      justify-content: center;
+      margin-top: 12rem;
+      margin-left: -11rem;
+  }
+
+  #caixa label{
+      display: flex;
+      justify-content: center;
+      margin-top: 11.90rem;
+      margin-left: -2rem;
+  }
+
+  #caixa p{
+      display: flex;
+      justify-content: center;
+      margin-top: 15rem;
+      margin-left: -13rem;
+  }
+
 
 /* botão */
 
 .button {
     position: center;
-    margin-top: 35px;
+    margin-top: 29rem;
+    margin-left: -84rem;
 	background-color:#979797;
 	border-radius:6px;
 	border:1px solid #888888;
 	display:inline-block;
 	cursor:pointer;
 	color:#ffffff;
+    width: 200px;
 	padding:20px 50px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #000000;
@@ -99,15 +115,12 @@ input[id="avançado"]{
 	top:1px;
 }
 
-/* arrumando o paragrafo da caixa */
-p{
-    margin-top: 15px;
-}
- 
-@media(min-width: 1150px) {
+@media(min-width: 830px) {
     .caixas {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
     }
 }
+
+
 
