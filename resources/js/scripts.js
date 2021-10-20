@@ -7,3 +7,14 @@ setInterval(function () {
         counter = 1;
     }
 }, 5000);
+
+function mbsearch() {
+    let search = document.querySelector("#MBsearch");
+    
+    search = document.body.addEventListener('keydown', function(enter) {
+        const key = 'enter';
+        key = window.location.href = "lol.html";
+    })
+}
+
+

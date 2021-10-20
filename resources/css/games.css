@@ -34,6 +34,7 @@
 
 .slider img {
     margin-right: 5rem;
+    transition: .5s;
 }
 
 .slide {
