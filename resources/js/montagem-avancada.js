@@ -13,7 +13,7 @@ async function showMB() {
     document.querySelector("#ram").innerHTML = `<div> Memória RAM: ${JSON[0].ram} </div>`;
     document.querySelector("#mb").innerHTML = `<div> Placa mãe: ${JSON[0].placa_mae} </div>`;
     document.querySelector("#stg").innerHTML = `<div> Armazenamento: ${JSON[0].armazenamento} </div>`;
-    document.querySelector("#pv").innerHTML = `<div> Armazenamento: ${JSON[0].placa_video} </div>`;
+    document.querySelector("#pv").innerHTML = `<div> Placa de vídeo: ${JSON[0].placa_video} </div>`;
 }
 
 showMB();
