@@ -9,3 +9,22 @@ h1 {
     justify-content: center;
     margin-top: 3rem;
 }
+
+#table {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 3rem;
+    border: 1px solid black;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+#mb, #stg, #pr, #ram, #pv {
+    padding: 0.3rem;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    font-weight: 500;
+}
