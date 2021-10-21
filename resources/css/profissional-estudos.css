@@ -72,7 +72,7 @@ main {
       display: flex;
       justify-content: center;
       margin-top: 12rem;
-      margin-left: -11rem;
+      margin-left: -12rem;
   }
 
   #caixa label{
@@ -94,8 +94,8 @@ main {
 
 .button {
     position: center;
-    margin-top: 29rem;
-    margin-left: -84rem;
+    margin-top: 3rem;
+    margin-left: -1rem;
 	background-color:#979797;
 	border-radius:6px;
 	border:1px solid #888888;
