@@ -12,10 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700&display=swap" rel="stylesheet">
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
 <body>
@@ -48,69 +45,71 @@
 
     <div class="titulo">
         <h1>Escolha o seu jogo:</h1>
-    </div>  
+    </div>
 
-    <div>
-        <div class="container">       
-            <div class="slider">
-                <div class="slide">
-                    <a href="fortnite.html">
-                        <img onclick="getMotherboards()" src="./resources/images/fortnite.svg" alt="fortnite" width="250px" height="400px">
-                    </a>                         
-                </div>
-                <div class="slide">
-                    <a href="gtav.html">
-                        <img src="./resources/images/gta_v.svg" alt="gta_v" width="250px" height="400px">
-                    </a>
-                </div>
-                <div class="slide">
-                    <a href="apex-legends.html">
-                        <img src="./resources/images/apex_legends.svg" alt="apex_legends" width="250px"
+    <div class="container">
+        <div class="slider">
+            <div class="slide">
+                <a href="fortnite.html">
+                    <img src="./resources/images/fortnite.svg" alt="fortnite" width="250px"
                         height="400px">
-                    </a>
-                </div>
-                <div class="slide">
-                    <a href="lol.html">
-                        <img src="./resources/images/lol.svg" alt="lol" width="250px" height="400px">
-                    </a>
-                </div>
-                <div class="slide">
-                    <a href="valorant.html">
-                        <img src="./resources/images/valorant.svg" alt="valorant" width="250px" height="400px">
-                    </a>
-                </div>
-                <div class="slide">
-                    <a href="csgo.html">
-                        <img src="./resources/images/cs_go.svg" alt="cs_go" width="250px" height="400px">
-                    </a>
-                </div>
-                <div class="slide">
-                    <a href="minecraft.html">
-                        <img src="./resources/images/minecraft.svg" alt="minecraft" width="250px" height="400px">
-                    </a>
-                </div>
-                <div class="slide">
-                    <a href="fifa21.html">
-                        <img src="./resources/images/fifa_21.svg" alt="fifa_21" width="250px" height="400px">
-                    </a>
-                </div>
-                <div class="slide">
-                    <a href="warzone.html">
-                        <img src="./resources/images/cod_warzone.svg" alt="cod_warzone" width="250px"
-                        height="400px">
-                    </a>
-                </div>
-                <div class="slide">
-                    <a href="dota2.html">
-                        <img src="./resources/images/dota_2.svg" alt="dota_2" width="250px" height="400px">
-                    </a>
-                </div>
+                </a>
+            </div>
+            <div class="slide">
+                <a href="gtav.html">
+                    <img src="./resources/images/gta_v.svg" alt="gta_v" width="250px" height="400px">
+                </a>
+            </div>
+            <div class="slide">
+                <a href="apex-legends.html">
+                    <img src="./resources/images/apex_legends.svg" alt="apex_legends" width="250px" height="400px">
+                </a>
+            </div>
+            <div class="slide">
+                <a href="lol.html">
+                    <img src="./resources/images/lol.svg" alt="lol" width="250px" height="400px">
+                </a>
+            </div>
+            <div class="slide">
+                <a href="valorant.html">
+                    <img src="./resources/images/valorant.svg" alt="valorant" width="250px" height="400px">
+                </a>
+            </div>
+            <div class="slide">
+                <a href="csgo.html">
+                    <img src="./resources/images/cs_go.svg" alt="cs_go" width="250px" height="400px">
+                </a>
+            </div>
+            <div class="slide">
+                <a href="minecraft.html">
+                    <img src="./resources/images/minecraft.svg" alt="minecraft" width="250px" height="400px">
+                </a>
+            </div>
+            <div class="slide">
+                <a href="fifa21.html">
+                    <img src="./resources/images/fifa_21.svg" alt="fifa_21" width="250px" height="400px">
+                </a>
+            </div>
+            <div class="slide">
+                <a href="warzone.html">
+                    <img src="./resources/images/cod_warzone.svg" alt="cod_warzone" width="250px" height="400px">
+                </a>
+            </div>
+            <div class="slide">
+                <a href="dota2.html">
+                    <img src="./resources/images/dota_2.svg" alt="dota_2" width="250px" height="400px">
+                </a>
             </div>
         </div>
     </div>
 
+    <img onclick="arrows.goRight()" id="right-arrow" src="./resources/images/right-arrow.png" alt="Seta para direita"
+        width="70px">
+    <img onclick="arrows.goLeft()" id="left-arrow" src="./resources/images/left-arrow.png" alt="Seta para esquerda"
+        width="70px">
+
     <script src="./resources/js/games.js"></script>
-    
+
 </body>
 
 </html>

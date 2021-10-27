@@ -48,17 +48,19 @@
 
 /* setas =================================== */
 
-.right-arrow img {
+#left-arrow {
     display: flex;
-    margin-right: 3rem;
-    margin-top: -15rem;
+    margin-top: -5rem;
+    padding: 8px;
 }
 
-.left-arrow img {
+#right-arrow {
     display: flex;
-    margin-left: 1.5rem;
-    margin-top: -3.1rem;
+    margin-left: 78rem;
+    margin-top: -14.5rem;
+    padding: 8px;
 }
+
 
 /* animações ============================= */
 @keyframes slide {
@@ -95,7 +97,6 @@
     80%{
         left: -2000px;
     }
-
     90%{
         left: -2250px;
     }

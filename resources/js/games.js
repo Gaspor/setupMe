@@ -6,3 +6,12 @@ async function getMotherboards() {
         console.log(itens);
         return itens;
 }
+
+const arrows = {
+        goRight() {
+                document.querySelector("#right-arrow").classList.add("click-right");
+        },
+        goLeft() {
+                document.querySelector("#left-arrow").classList.add("click-left");
+        }
+}

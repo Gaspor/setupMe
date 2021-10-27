@@ -8,13 +8,15 @@ setInterval(function () {
     }
 }, 5000);
 
+
+/*
 function mbsearch() {
     let search = document.querySelector("#MBsearch");
     
     search = document.body.addEventListener('keydown', function(enter) {
-        const key = 'enter';
+        let key = 'enter';
         key = window.location.href = "lol.html";
     })
 }
-
+*/
 
