@@ -94,7 +94,7 @@ main {
 
 .button {
     position: center;
-    margin-top: 3rem;
+    margin-top: 1rem;
     margin-left: -1rem;
 	background-color:#979797;
 	border-radius:6px;
@@ -113,6 +113,13 @@ main {
 .button:active {
 	position:relative;
 	top:1px;
+}
+
+#warning{
+    position: center;
+    margin-top: 1rem;
+    margin-right: 1rem;
+    color:#ff0000;
 }
 
 @media(min-width: 830px) {
