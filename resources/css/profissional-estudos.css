@@ -27,7 +27,7 @@ main {
     overflow: hidden;
     margin-right: 6rem;
     margin-top: 2rem;
-    left: 40px;
+    left: 45px;
     border-radius: 2px;
     flex-direction: row;
     background: #fdfdfdda;
@@ -72,7 +72,7 @@ main {
       display: flex;
       justify-content: center;
       margin-top: 12rem;
-      margin-left: -11rem;
+      margin-left: -12rem;
   }
 
   #caixa label{
@@ -94,8 +94,8 @@ main {
 
 .button {
     position: center;
-    margin-top: 29rem;
-    margin-left: -84rem;
+    margin-top: 1rem;
+    margin-left: -1rem;
 	background-color:#979797;
 	border-radius:6px;
 	border:1px solid #888888;
@@ -113,6 +113,13 @@ main {
 .button:active {
 	position:relative;
 	top:1px;
+}
+
+#warning{
+    position: center;
+    margin-top: 1rem;
+    margin-right: 1rem;
+    color:#ff0000;
 }
 
 @media(min-width: 830px) {
