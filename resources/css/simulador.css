@@ -6,13 +6,13 @@
 }
 
 #title {
-    background: rgba(128, 128, 128, 0.5);
+    background: rgba(128, 128, 128, 0.301);
     display: flex;
     justify-content: center;
 }
 
-#title h2 {
-    font-weight: 550;
+#title p {
+    font-size: 1.7rem;
 }
 
 #container {
@@ -21,19 +21,44 @@
 
 #processador {
     display: flex;
+    margin-bottom: 2rem;
 }
 
 #processador p {
-    margin: 0.4rem 0 0 1.8rem;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.3rem 0 0 1.8rem;
     background: rgba(128, 128, 128, 0.301);
-    padding: 0.5rem 5rem 0.5rem 5rem;
+    width: 22rem;
     text-align: center;
     border-radius: 3.5rem;
     font-size: 1.1rem;
 }
 
-#setinha img{
-    margin: 1.9rem;
-    margin-top: -15rem;
-    margin-left: 15.7rem;
+#processador img:last-child{
+    margin: 0.8rem 0 0 -2.5rem;
+    width: 28px;
+    height: 28px;
+}
+
+#processador ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.lista-simulador{
+    list-style: none;
+    margin: 0 0 2rem 11rem;
+    
+}
+
+ .lista-simulador li{
+    visibility: hidden;
+    margin: 0.5rem 0 0 0;
+    border: 1px solid black;
+    width: 15%;
+    z-index: 1;
 }
