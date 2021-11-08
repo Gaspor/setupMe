@@ -54,6 +54,11 @@
     padding: .5rem 2.8rem 1.8rem 0;
 }
 
+#lista_processador li{
+    list-style: none;
+    padding: .5rem 2.8rem 1.8rem 0;
+}
+
 .menu-simulador ul ul {
     position: absolute;
     visibility: hidden;
@@ -72,6 +77,13 @@
 }
 
 .menu-simulador .lista-simulador {
+    display: block;
+    margin: 0 0 0 -24.5rem;
+    border: 1px solid black;
+    background: #fafbfc;
+}
+
+.menu-simulador #lista_processador {
     display: block;
     margin: 0 0 0 -24.5rem;
     border: 1px solid black;
