@@ -8,37 +8,31 @@ let urlFonte = "https://setupme.herokuapp.com/fontes";
 async function getProcessador() {
     const response = await fetch(urlProcessador)
     const itens = await response.json();
-    console.log(itens);
     return itens;
 }
 async function getPlaca_video() {
     const response = await fetch(urlPlaca_video)
     const itens = await response.json();
-    console.log(itens);
     return itens;
 }
 async function getPlaca_mae() {
     const response = await fetch(urlPlaca_mae);
     const itens = await response.json();
-    console.log(itens);
     return itens;
 }
 async function getRAMS() {
     const response = await fetch(urlRAMS);
     const itens = await response.json();
-    console.log(itens);
     return itens;
 }
 async function getStorage() {
     const response = await fetch(urlStorage)
     const itens = await response.json();
-    console.log(itens);
     return itens;
 }
 async function getFontes() {
     const response = await fetch(urlFonte)
     const itens = await response.json();
-    console.log(itens);
     return itens;
 }
 
@@ -82,6 +76,26 @@ async function getFontes_sim() {
     document.querySelector("#fontes2").innerHTML = `<p> ${JSON[1].nome} </p>`;
 }
 
+async function Processador1 () {
+    const JSON = await getProcessador();
+    document.querySelector("#replace-processador").innerHTML = `${JSON[0].nome}`;
+    document.querySelector("#preco").innerHTML = `${JSON[0].preco}`;
+}
+async function Processador2 () {
+    const JSON = await getProcessador();
+    document.querySelector("#replace-processador").innerHTML = `${JSON[1].nome}`;
+    document.querySelector("#preco").innerHTML = `${JSON[1].preco}`;
+}
+async function Processador3 () {
+    const JSON = await getProcessador();
+    document.querySelector("#replace-processador").innerHTML = `${JSON[2].nome}`;
+    document.querySelector("#preco").innerHTML = `${JSON[2].preco}`;
+}
+async function Processador4 () {
+    const JSON = await getProcessador();
+    document.querySelector("#replace-processador").innerHTML = `${JSON[3].nome}`;
+    document.querySelector("#preco").innerHTML = `${JSON[3].preco}`;
+}
 
 getProcessador_sim();
 getPlaca_video_sim();

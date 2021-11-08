@@ -60,7 +60,7 @@
     transition: .5s;
 }
 
-.menu-simulador ul:hover {
+.menu-simulador ul li:hover {
     zoom: 103%;
 }
 
@@ -78,6 +78,11 @@
     background: #fafbfc;
 }
 
+.lista-simulador a {
+    text-decoration: none;
+    color: black;
+}
+
 /* container do total das peças */
 
 .total {
@@ -88,8 +93,8 @@
     align-items: center;
     width: 12rem;
     height: 5rem;
-    margin-top: -26rem;
-    margin-left: 62rem;
+    margin-top: -25rem;
+    margin-left: 50rem;
 }
 
 .total #texto-total {
