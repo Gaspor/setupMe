@@ -16,11 +16,12 @@ async function populateDropdown(url, tagName) {
 
     for(let i = 0; i < JSON.length; i++) {
         if (tagName == "armazenamento") {
+            const storagePrefix = JSON[i].gb >= 128 ? "GB" : "TB";
             if (!JSON[i].m2) {
-                document.getElementById(`lista_hd`).innerHTML += `<li class="hd"><p> ${JSON[i].nome}, TB: ${JSON[i].gb} </p></li>\n`;    
+                document.getElementById(`lista_hd`).innerHTML += `<li class="hd"><p> ${JSON[i].nome} ${storagePrefix} ${JSON[i].gb} </p></li>\n`;    
 
             } else {
-                document.getElementById(`lista_ssd`).innerHTML += `<li class="ssd"><p> ${JSON[i].nome}, TB: ${JSON[i].gb} </p></li>\n`;
+                document.getElementById(`lista_ssd`).innerHTML += `<li class="ssd"><p> ${JSON[i].nome} ${storagePrefix} ${JSON[i].gb} </p></li>\n`;
 
             }
 
