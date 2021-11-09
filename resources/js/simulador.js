@@ -19,16 +19,19 @@ async function populateDropdown(url, tagName) {
             const storagePrefix = JSON[i].gb >= 128 ? "GB" : "TB";
             if (!JSON[i].m2) {
                 document.getElementById(`lista_hd`).innerHTML += `<li class="hd"><p> ${JSON[i].nome} ${storagePrefix} ${JSON[i].gb} </p></li>\n`;    
-
             } else {
                 document.getElementById(`lista_ssd`).innerHTML += `<li class="ssd"><p> ${JSON[i].nome} ${storagePrefix} ${JSON[i].gb} </p></li>\n`;
-
             }
-
         } else {
             document.getElementById(`lista_${tagName}`).innerHTML += `<li class="${tagName}"><p> ${JSON[i].nome} </p></li>\n`;
-
         }
+    }
+}
+
+async function clickProcessador(url, tagName) {
+    const JSON = await getJson(url);
+    for(let i = 0; i < JSON.length; i++) {
+        document.getElementById(`lista_${tagName}`).innerHTML = `<li class="${tagName}"><p ${onclick= clickProcessador(urlProcessador, "processador")}> ${JSON[i].nome} </p></li>\n`;
     }
 }
 

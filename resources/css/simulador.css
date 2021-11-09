@@ -65,8 +65,9 @@
     transition: .5s;
 }
 
-.menu-simulador ul:hover {
+.menu-simulador ul li:hover {
     zoom: 103%;
+    cursor: pointer;
 }
 
 .menu-simulador ul li:hover ul{
