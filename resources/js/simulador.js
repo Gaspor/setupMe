@@ -20,9 +20,10 @@ async function populateDropdown(url, tagName) {
         if (tagName == "armazenamento") {
             const storagePrefix = JSON[i].gb >= 128 ? "GB" : "TB";
             if (!JSON[i].m2) {
-                document.getElementById(`lista_hd`).innerHTML += '<li class="hd"><p onclick="clicked(\'' + preco + '\',\'' + nome + '\',\'' + tagName + '\')">' + nome + ' ' + storagePrefix + ' ' + JSON[i].gb + '</p></li>';
+                document.getElementById(`lista_hd`).innerHTML += '<li class="hd"><p onclick="clicked(\'' + preco + '\',\'' + nome + '\',\'' + "hd" + '\')">' + nome + ' ' + storagePrefix + ' ' + JSON[i].gb + '</p></li>';
+            
             } else {
-                document.getElementById(`lista_ssd`).innerHTML += '<li class="ssd"><p onclick="clicked(\'' + preco + '\',\'' + nome + '\',\'' + tagName + '\')">' + nome + ' ' + storagePrefix + ' ' + JSON[i].gb + '</p></li>';
+                document.getElementById(`lista_ssd`).innerHTML += '<li class="ssd"><p onclick="clicked(\'' + preco + '\',\'' + nome + '\',\'' + "ssd" + '\')">' + nome + ' ' + storagePrefix + ' ' + JSON[i].gb + '</p></li>';
             }
         } else {
             document.getElementById(`lista_${tagName}`).innerHTML += '<li class="' + tagName + '"><p onclick="clicked(\'' + preco + '\',\'' + nome + '\',\'' + tagName + '\')">' + nome + '</p></li>';
