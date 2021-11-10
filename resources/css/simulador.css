@@ -93,6 +93,13 @@
 
 /* container do total das peças */
 
+#total-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: -26rem 0 0 30rem;
+}
+
 .total {
     background: rgba(128, 128, 128, 0.171);
     display: flex;
@@ -101,8 +108,6 @@
     align-items: center;
     width: 12rem;
     height: 5rem;
-    margin-top: -26rem;
-    margin-left: 62rem;
 }
 
 .total #texto-total {
