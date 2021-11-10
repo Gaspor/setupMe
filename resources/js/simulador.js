@@ -20,25 +20,23 @@ async function populateDropdown(url, tagName) {
         if (tagName == "armazenamento") {
             const storagePrefix = JSON[i].gb >= 128 ? "GB" : "TB";
             if (!JSON[i].m2) {
-                document.getElementById(`lista_hd`).innerHTML += `<li class="hd"><p onclick="clicked(${JSON[i].preco}, ${JSON[i].nome}, ${tagName})"> ${JSON[i].nome} ${storagePrefix} ${JSON[i].gb} </p></li>`;    
+                document.getElementById(`lista_hd`).innerHTML += '<li class="hd"><p onclick="clicked(\'' + preco + '\',\'' + nome + '\',\'' + tagName + '\')">' + nome + ' ' + storagePrefix + ' ' + JSON[i].gb + '</p></li>';
             } else {
-                document.getElementById(`lista_ssd`).innerHTML += `<li class="ssd"><p onclick="clicked(${JSON[i].preco}, ${JSON[i].nome}, ${tagName})"> ${JSON[i].nome} ${storagePrefix} ${JSON[i].gb} </p></li>`;
+                document.getElementById(`lista_ssd`).innerHTML += '<li class="ssd"><p onclick="clicked(\'' + preco + '\',\'' + nome + '\',\'' + tagName + '\')">' + nome + ' ' + storagePrefix + ' ' + JSON[i].gb + '</p></li>';
             }
         } else {
-            document.getElementById(`lista_${tagName}`).innerHTML += "<li class="+tagName+"><p onclick=\"clicked("+preco+", "+nome+", "+tagName+")\"> "+nome+"</p></li>";
-            console.log(preco);
+            document.getElementById(`lista_${tagName}`).innerHTML += '<li class="' + tagName + '"><p onclick="clicked(\'' + preco + '\',\'' + nome + '\',\'' + tagName + '\')">' + nome + '</p></li>';
         }
     }
 }
 
 async function clicked(value, productName, tagName) {
-    // changeName(productName, tagName);
-    console.log(value);
+    changeName(productName, tagName);
     addInTotal(value);
 }
 
 async function changeName(productName, tagName) {
-    document.getElementById("replace").innerHTML += productName;
+    document.getElementById("replace_" + tagName).innerHTML = productName;
 }
 
 async function addInTotal(value) {
