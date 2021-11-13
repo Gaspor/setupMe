@@ -5,6 +5,16 @@ let urlRAMS = "https://setupme.herokuapp.com/rams";
 let urlStorage = "https://setupme.herokuapp.com/armazenamentos";
 let urlFonte = "https://setupme.herokuapp.com/fontes";
 
+let computador = {
+    processador: "",
+    placa_video: "",
+    placa_mae: "",
+    ram: "",
+    hd: "",
+    ssd: "",
+    fonte: "",
+}
+
 async function getJson(url) {
     const response = await fetch(url);
     const itens = await response.json();
@@ -14,14 +24,13 @@ async function getJson(url) {
 async function populateDropdown(url, tagName) {
     const JSON = await getJson(url);
 
-    for(let i = 0; i < JSON.length; i++) {
+    for (let i = 0; i < JSON.length; i++) {
         const preco = JSON[i].preco;
         const nome = JSON[i].nome;
         if (tagName == "armazenamento") {
             const storagePrefix = JSON[i].gb >= 128 ? "GB" : "TB";
             if (!JSON[i].m2) {
                 document.getElementById(`lista_hd`).innerHTML += '<li class="hd"><p onclick="clicked(\'' + preco + '\',\'' + nome + '\',\'' + "hd" + '\')">' + nome + ' ' + storagePrefix + ' ' + JSON[i].gb + '</p></li>';
-            
             } else {
                 document.getElementById(`lista_ssd`).innerHTML += '<li class="ssd"><p onclick="clicked(\'' + preco + '\',\'' + nome + '\',\'' + "ssd" + '\')">' + nome + ' ' + storagePrefix + ' ' + JSON[i].gb + '</p></li>';
             }
@@ -34,6 +43,8 @@ async function populateDropdown(url, tagName) {
 async function clicked(value, productName, tagName) {
     changeName(productName, tagName);
     addInTotal(value);
+    populateComputer(productName, tagName);
+    changeP(tagName, productName);
 }
 
 async function changeName(productName, tagName) {
@@ -44,6 +55,17 @@ async function addInTotal(value) {
     const precoElement = document.getElementById(`preco`);
     let preco = parseFloat(precoElement.textContent.replace("R$ ", ""));
     precoElement.innerHTML = "R$ " + (preco + parseFloat(value)).toFixed(2);
+}
+
+function populateComputer(productName, tagName) {
+    computador.tagName = productName;
+    console.log(computador.tagName);
+}
+
+function changeP(tagName, productName) {
+    if (productName) {
+        document.getElementById("probabilidade").innerHTML = "asdsadasdas";
+    }
 }
 
 populateDropdown(urlProcessador, "processador");
