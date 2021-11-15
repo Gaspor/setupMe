@@ -27,6 +27,8 @@ async function populateDropdown(url, tagName) {
     for (let i = 0; i < JSON.length; i++) {
         const preco = JSON[i].preco;
         const nome = JSON[i].nome;
+        const gbs = JSON[i].gbs;
+
         if (tagName == "armazenamento") {
             const storagePrefix = JSON[i].gb >= 128 ? "GB" : "TB";
             if (!JSON[i].m2) {
@@ -41,10 +43,9 @@ async function populateDropdown(url, tagName) {
 }
 
 async function clicked(value, productName, tagName) {
+    await populateComputer(productName, tagName);
     changeName(productName, tagName);
     addInTotal(value);
-    populateComputer(productName, tagName);
-    changeP(tagName, productName);
 }
 
 async function changeName(productName, tagName) {
@@ -57,16 +58,38 @@ async function addInTotal(value) {
     precoElement.innerHTML = "R$ " + (preco + parseFloat(value)).toFixed(2);
 }
 
-function populateComputer(productName, tagName) {
-    computador.tagName = productName;
-    console.log(computador.tagName);
+async function populateComputer(productName, tagName) {
+    computador[tagName] = productName;
+    // console.log(computador[tagName]);
 }
 
-function changeP(tagName, productName) {
-    if (productName) {
-        document.getElementById("probabilidade").innerHTML = "asdsadasdas";
+function changeP() {
+    // console.log(computador.processador);
+    if (computador.processador == "Core i9-10900" && computador.placa_video == "GeForce RTX 3060 Ti XC Gaming" && computador.placa_mae == "B550M DS3H" && computador.ram == "XPG Spectrix D41" && (computador.hd == "HD Barracuda" || computador.ssd == "M2 NVME Blue") && computador.fonte == "Core Reactor") {
+        document.getElementById("probabilidade").innerHTML = "O desempenho desse computador para jogos e para estudos é de aproximadamente 100%.";
+        document.getElementById("sistema-operacional").innerHTML = "O sistema operacional recomendado para este computador é Windows 7/8/8.1/10 e Linux.";
+        document.getElementById("internet").innerHTML = "O plano de internet recomendado para este computador é de 10 a 50 megas.";
+    }
+    if (computador.processador == "Core i7-11700F" && computador.placa_video == "GeForce GTX 1650" && computador.placa_mae == "ROG Strix X570-E Gaming" && computador.ram == "Patriot Viper Elite" && (computador.hd == "HD BarraCuda" || computador.ssd == "M2 NVME SX6000 Lite") && computador.fonte == "GP-P550B") {
+        document.getElementById("probabilidade").innerHTML = "O desempenho desse computador para jogos e para estudos é de aproximadamente 80%.";
+        document.getElementById("sistema-operacional").innerHTML = "O sistema operacional recomendado para este computador é Windows 7/8/8.1/10 e Linux.";
+        document.getElementById("internet").innerHTML = "O plano de internet recomendado é de 10 a 50 megas.";
+    }
+    if (computador.processador == "Ryzen 5 5600X" && computador.placa_video == "Dual RX 6600 XT O8G" && computador.placa_mae == "ROG MAXIMUS XII FORMULA" && computador.ram == "PNY Performance" && (computador.hd == "HD BarraCuda" || computador.ssd == "M2 NVME SX6000 Lite") && computador.fonte == "GP-P550B") {
+        document.getElementById("probabilidade").innerHTML = "O desempenho desse computador para jogos e para estudos é de aproximadamente 60%.";
+        document.getElementById("sistema-operacional").innerHTML = "O sistema operacional recomendado para este computador é Windows 7/8/8.1/10 e Linux.";
+        document.getElementById("internet").innerHTML = "O plano de internet recomendado é de 10 a 50 megas.";
+    }
+    if (computador.processador == "Ryzen 5 3600" && computador.placa_video == "Radeon RX 6900XT Limited Black Gaming" && computador.placa_mae == "MPG Z490 GAMING CARBON WIFI" && computador.ram == "PNY Performance" && (computador.hd == "HD BarraCuda" || computador.ssd == "M2 NVME SX6000 Lite") && computador.fonte == "GP-P550B") {
+        document.getElementById("probabilidade").innerHTML = "O desempenho desse computador para jogos e para estudos é de aproximadamente 40%.";
+        document.getElementById("sistema-operacional").innerHTML = "O sistema operacional recomendado para este computador é Windows 7/8/8.1/10 e Linux.";
+        document.getElementById("internet").innerHTML = "O plano de internet recomendado é de 10 a 50 megas.";
+    }
+    else {
+        document.getElementById("probabilidade").innerHTML = "Não há dados suficientes para retornar informações extras da montagem.";
     }
 }
+
 
 populateDropdown(urlProcessador, "processador");
 populateDropdown(urlPlaca_video, "placa_video");

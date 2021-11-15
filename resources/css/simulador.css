@@ -5,6 +5,10 @@
     font-family: 'Poppins';
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 #title {
     background: rgba(128, 128, 128, 0.301);
     display: flex;
@@ -19,12 +23,12 @@
     margin: 3rem 0 0 3rem;
 }
 
-#processador {
+#component {
     display: flex;
     margin-bottom: 2rem;
 }
 
-#processador p {
+#component p {
     font-weight: 300;
     display: flex;
     justify-content: center;
@@ -37,13 +41,13 @@
     font-size: 1.1rem;
 }
 
-#processador .imagem-seta img{
+#component .imagem-seta img{
     margin: 0.9rem 0 0 -2.5rem;
     width: 28px;
     height: 28px;
 }
 
-#processador ul {
+#component ul {
     list-style: none;
     display: flex;
     flex-direction: column;
@@ -125,6 +129,10 @@
     height: 3px;
 }
 
+.imagem-seta.remove {
+    visibility: hidden;
+}
+
 /* Botão final do simulador */
 
 #montar-final {
@@ -138,6 +146,8 @@
     border: 1px solid black;
     background: rgba(128, 128, 128, 0.171);
     border-radius: .6rem;
+    text-decoration: none;
+    color: black;
 }
 
 #montar-final #botao-montar:hover {
@@ -147,6 +157,12 @@
 }
 
 /* Informações extras */
+
+#texto-obs {
+    margin: 45rem 0 -18.5rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
 
 #informacoes-extras {
     /* visibility: hidden; */

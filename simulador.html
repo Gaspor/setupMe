@@ -57,7 +57,7 @@
     <main>
         <div id="container">
             <nav class="menu-simulador">
-                <div id="processador">
+                <div id="component">
                     <img src="./resources/images/processador-simulador.png" alt="Imagem de um processador" width="50px"
                         height="50px">
                     <p id="replace_processador">Processador</p>
@@ -69,7 +69,7 @@
                     </ul>
                 </div>
 
-                <div id="processador">
+                <div id="component">
                     <img src="./resources/images/placa-video-simulador.png" alt="Imagem de uma placa de vídeo">
                     <p id="replace_placa_video">Placa de vídeo</p>
                     <ul>
@@ -80,7 +80,7 @@
                     </ul>
                 </div>
 
-                <div id="processador">
+                <div id="component">
                     <img src="./resources/images/placa-mae-simulador.png" alt="Imagem de uma placa mãe">
                     <p id="replace_placa_mae">Placa mãe</p>
                     <ul>
@@ -91,7 +91,7 @@
                     </ul>
                 </div>
 
-                <div id="processador">
+                <div id="component">
                     <img src="./resources/images/memoriaram-simulador.png" alt="Imagem de uma memória RAM">
                     <p id="replace_ram">Memória RAM</p>
                     <ul>
@@ -102,7 +102,7 @@
                     </ul>
                 </div>
 
-                <div id="processador">
+                <div id="component">
                     <img src="./resources/images/hd-simulador.png" alt="Imagem de um HD">
                     <p id="replace_hd">HD</p>
                     <ul>
@@ -113,7 +113,7 @@
                     </ul>
                 </div>
 
-                <div id="processador">
+                <div id="component">
                     <img src="./resources/images/ssd-simulador.png" alt="Imagem de um SSD">
                     <p id="replace_ssd">SSD</p>
                     <ul>
@@ -124,7 +124,7 @@
                     </ul>
                 </div>
 
-                <div id="processador">
+                <div id="component">
                     <img src="./resources/images/fonte-simulador.png" alt="Imagem de uma fonte">
                     <p id="replace_fonte">Fonte</p>
                     <ul>
@@ -147,17 +147,18 @@
 
         <section>
             <div id="montar-final">
-                <a id="botao-montar">Montar</a>
+                <a href="#informacoes-extras" onclick="changeP()" id="botao-montar">Montar</a>
             </div>
         </section>
 
+        <p id="texto-obs">Obs.: A informação extra só aparecerá após escolher as peças e clicar em montar.</p>
         <section>
             <div id="informacoes-extras">
                 <h3>Informações extras</h3>
                 <div id="container-informacoes">
-                    <p id="probabilidade">asdasd</p>
-                    <p id="sistema-operacional">dasdsa</p>
-                    <p id="internet">dasdsa</p>
+                    <p id="probabilidade"></p>
+                    <p id="sistema-operacional"></p>
+                    <p id="internet"></p>
                 </div>
             </div>
         </section>
