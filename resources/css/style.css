@@ -53,6 +53,7 @@ main {
 }
 
 .navigation-manual{
+    visibility: hidden;
     position: absolute;
     width: 800px;
     margin-top: 30rem;

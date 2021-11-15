@@ -16,9 +16,13 @@ header {
 
 #simulador {
     font-size: 1.3rem;
-    margin-top: 0.6rem;
+    margin-top: 0.4rem;
     margin-right: 2.5rem;
     font-weight: 800;
+}
+
+#simulador:hover{
+    zoom: 101%;
 }
 
 .menu {
@@ -26,6 +30,7 @@ header {
     height: 1.3rem;
     margin-bottom: 0.6rem;
     z-index: 1;
+    margin-right: 6rem;
 }
 
 .menu ul {
@@ -48,6 +53,10 @@ header {
     border: 1px solid black;
     border-bottom: none;
     border-top: none;
+}
+
+.menu:hover {
+    cursor: pointer;
 }
 
 .menu a:first-child {
@@ -74,9 +83,9 @@ header {
     background-color: #DFDFDF;
     transition: 0.5s;
 }
- 
+
 .logo {
-    margin: 1.1rem;
+    margin: .5rem 0 0 1.5rem;
 }
 
 .input-pesquisa {
@@ -85,15 +94,15 @@ header {
     justify-content: center;
 }
 
-input {
+/* input {
     margin: 2.5rem;
     border-radius: 2.5rem;
     height: 1.4rem;
-}
+} */
 
 /* Barra de pesquisa ==================================================== */
 
-.search-txt {
+/* .search-txt {
     border: 1px solid;
     border-width: thin;
     background: none;
@@ -115,7 +124,7 @@ input {
 
 .search-txt:hover {
     box-shadow: 0.2rem 0.2rem 0.2rem 0.2rem rgba(0,0,0,0.2);
-}
+} */
 
 @media (max-width: 600px) {
     .logo img{
@@ -126,5 +135,8 @@ input {
     }
     .search-box {
         visibility: hidden;
+    }
+    .container-simulador img {
+        width: 100px;
     }
 }

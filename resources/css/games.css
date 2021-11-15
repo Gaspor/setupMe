@@ -43,24 +43,19 @@
 }
 
 .slide img:hover {
-    zoom: 105%;
+    zoom: 102%;
 }
 
 /* setas =================================== */
 
-#left-arrow {
+#setas-games {
     display: flex;
-    margin-top: -5rem;
-    padding: 8px;
+    justify-content: space-between;
 }
 
-#right-arrow {
-    display: flex;
-    margin-left: 78rem;
-    margin-top: -14.5rem;
-    padding: 8px;
+#arrow {
+   margin: -14.6rem 1rem 14.6rem 1rem;
 }
-
 
 /* animações ============================= */
 @keyframes slide {
@@ -96,8 +91,5 @@
     }
     80%{
         left: -2000px;
-    }
-    90%{
-        left: -2250px;
     }
 }
