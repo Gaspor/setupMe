@@ -7,47 +7,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simulador</title>
 
-    <link rel="stylesheet" href="./resources/css/header.css">
     <link rel="stylesheet" href="./resources/css/simulador.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 
 <body>
-    <header>
-        <div class="logo">
-            <a href="index.html"><img src="./resources/images/imagem-logo.png" alt="logo site"></a>
-        </div>
-        <div class="input-pesquisa">
-            <a href="simulador.html"><img id="simulador" src="./resources/images/simulador.png" alt="Simulador"></a>
-            <nav class="menu">
-                <ul>
-                    <li><img class="menu-img" src="./resources/images/menu-montagem.png" alt="Menu de montagem">
-                        <ul>
-                            <li>
-                                <a href="games.html">Montagem Gamer</a>
-                            </li>
-                            <li>
-                                <a href="profissional-estudos.html">Montagem Profissional <br>& Estudos</a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
-            <!-- <div class="search-box">
-                <input type="text" id="pesquisa" class="search-txt" placeholder="  Pesquisar" name="Pesquisa"
-                    list="searchComponents">
-                <datalist id="searchComponents">
-                    <option onclick="mbsearch()" id="MBsearch" value="Placa mãe"></option>
-                    <option value="Placa de vídeo"></option>
-                    <option value="Processador"></option>
-                    <option value="Memória RAM"></option>
-                    <option value="Armazenamento"></option>
-                </datalist>
-            </div> -->
-        </div>
+    <header id="header">
+        <script>
+            $(function () {
+                $("#header").load("header.html");
+            });
+        </script>
     </header>
 
     <div id="title">
@@ -151,7 +125,8 @@
             </div>
         </section>
 
-        <p id="texto-obs">Obs.: As informações extras só apareceram após escolher todas as peças (com exceção do HD e SSD) e clicar em montar.</p>
+        <p id="texto-obs">Obs.: As informações extras só apareceram após escolher todas as peças (com exceção do HD e
+            SSD) e clicar em montar.</p>
         <section>
             <div id="informacoes-extras">
                 <h3>Informações extras</h3>
@@ -163,7 +138,9 @@
             </div>
         </section>
     </main>
+
     <script src="./resources/js/simulador.js"></script>
+
 </body>
 
 </html>
