@@ -28,15 +28,15 @@
         <div class="opcoes">
             <div class="caixas">
                 <div id="caixa">
-                        <h3>BÁSICO</h3>
+                    <h3>BÁSICO</h3>
                     <img class="basico" src="./resources/images/office.png" width="300px" height="150px">
                     <input class="buttons" type="radio" id="basico" name="seleção" value="basico">
                     <label for="basico">Selecionar</label>
-                   <p>Recomendado em uso de pacote Office (Excel, Word, Power Point, etc), navgador e extensões em
+                    <p>Recomendado em uso de pacote Office (Excel, Word, Power Point, etc), navgador e extensões em
                         geral, como o PDF.</p>
                 </div>
-               <div id="caixa">
-                        <h3 class="titulomedio">MÉDIO</h3>
+                <div id="caixa">
+                    <h3 class="titulomedio">MÉDIO</h3>
                     <img class="medio" src="./resources/images/programaçao.png" width="300px" height="150px">
                     <input class="buttons" type="radio" id="medio" name="seleção" value="medio">
                     <label for="medio">Selecionar</label>
@@ -44,20 +44,21 @@
                         desenvolvimento em geral.</p>
                 </div>
                 <div id="caixa">
-                        <h3 class="tituloavançado">AVANÇADO</h3>
-                    <img class="avançado" src="./resources/images/editor-de-video.png" width="300px" height="150px">
+                    <h3 class="tituloavançado">AVANÇADO</h3>
+                    <img class="avancado" src="./resources/images/editor-de-video.png" width="300px" height="150px">
                     <input class="buttons" type="radio" id="avançado" name="seleção" value="avançado">
                     <label for="avançado">Selecionar</label>
                     <p>Recomendado em programas de edições de vídeo (Sony Vegas, DaVinci Resolve, etc),
-                        processamento de imagem (CorelDraw, 3DSMax, etc).</p> 
+                        processamento de imagem (CorelDraw, 3DSMax, etc).</p>
                 </div>
             </div>
         </div>
     </main>
-    <center>
+    <div id="container-botao">
         <div id="warning"></div>
         <a href="#" class="button" onclick="checkBasico(), checkMedio(), checkAvancado(), noCheck()">MONTAR</a>
-    </center>
+    </div>
     <script src="./resources/js/profissional-estudos.js"></script>
 </body>
+
 </html>
