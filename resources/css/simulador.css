@@ -28,7 +28,7 @@ html {
     margin-bottom: 2rem;
 }
 
-#component p {
+#component button {
     font-weight: 300;
     display: flex;
     justify-content: center;
@@ -37,15 +37,10 @@ html {
     background: rgba(128, 128, 128, 0.301);
     width: 22rem;
     text-align: center;
-    border-radius: 3.5rem;
+    border-radius: 5px;
     font-size: 1.1rem;
 }
 
-#component .imagem-seta img{
-    margin: 0.9rem 0 0 -2.5rem;
-    width: 28px;
-    height: 28px;
-}
 
 #component ul {
     list-style: none;
@@ -54,14 +49,20 @@ html {
     border-radius: .7rem;
 }
 
+
 .lista-simulador li{
     list-style: none;
-    padding: .5rem 2.8rem 1.8rem 0;
-}
-
-#lista_processador li{
-    list-style: none;
-    padding: .5rem 2.8rem 1.8rem 0;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    position: center;
+    margin-left: 13rem;
+    width: 22rem;
+    height: 3rem;
+    background-color: black;
+    background-image: linear-gradient(to right,  rgba(210, 210, 210, 0.9), rgba(180, 180, 180, 0.9), rgba(150, 150, 150, 0.8), rgba(130, 130, 130, 0.8));
+    border-radius: 5px 5px 5px 5px;
+    border: 0.5px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 0.5rem 0 rgba(211, 211, 211, 0.301);
 }
 
 .menu-simulador ul ul {
@@ -89,10 +90,12 @@ html {
     background: #fafbfc;
 }
 
-.menu-simulador #lista_processador {
+.menu-simulador #lista_processador, #lista_placa_video, #lista_placa_mae, #lista_ram, #lista_hd, #lista_ssd, #lista_fonte {
     display: block;
-    margin: 0 0 0 -24.5rem;
+    position: center;
+    margin: 15% auto;
     border: 1px solid black;
+    width: 60%;
     background: #fafbfc;
 }
 
@@ -187,4 +190,25 @@ html {
 
 #container-informacoes {
     margin-top: 3rem;
+}
+
+/* The Modal (background) */
+.modal, .close {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(3, 0, 24, 0.425); /* Black w/ opacity */
+  }
+
+  .modal-content p{
+    margin-left: 0.5rem;
+    margin-top: 0.5rem;
+    width: 22rem;
+    text-decoration: solid white;
 }

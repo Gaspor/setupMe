@@ -31,82 +31,78 @@
     <main>
         <div id="container">
             <nav class="menu-simulador">
+
                 <div id="component">
                     <img src="./resources/images/processador-simulador.png" alt="Imagem de um processador" width="50px"
                         height="50px">
-                    <p id="replace_processador">Processador</p>
-                    <ul>
-                        <li class="imagem-seta"><img src="./resources/images/down-arrow.png"
-                                alt="Imagem de uma seta para baixo" width="30px" height="30px">
-                            <ul id="lista_processador" class=lista-simulador></ul>
-                        </li>
-                    </ul>
+                    <button id="replace_processador">Processador</button>
+                        <div id="processador" onclick() class="modal">
+                            <div class="modal-content">
+                                    <p><ul id="lista_processador" class="lista-simulador"></ul></p> 
+                                     
+                        </div>
+                    </div>
                 </div>
+
 
                 <div id="component">
                     <img src="./resources/images/placa-video-simulador.png" alt="Imagem de uma placa de vídeo">
-                    <p id="replace_placa_video">Placa de vídeo</p>
-                    <ul>
-                        <li class="imagem-seta"><img src="./resources/images/down-arrow.png"
-                                alt="Imagem de uma seta para baixo" width="30px" height="30px">
-                            <ul id="lista_placa_video" class="lista-simulador"></ul>
-                        </li>
-                    </ul>
+                    <button id="replace_placa_video">Placa de vídeo</button>
+                    <div id="placavideo" class="modal">
+                        <div class="modal-content">
+                            <p><ul id="lista_placa_video" class="lista-simulador"></ul></p>
+                        </div>
+                    </div>
                 </div>
 
                 <div id="component">
                     <img src="./resources/images/placa-mae-simulador.png" alt="Imagem de uma placa mãe">
-                    <p id="replace_placa_mae">Placa mãe</p>
-                    <ul>
-                        <li class="imagem-seta"><img src="./resources/images/down-arrow.png"
-                                alt="Imagem de uma seta para baixo" width="30px" height="30px">
-                            <ul id="lista_placa_mae" class="lista-simulador"></ul>
-                        </li>
-                    </ul>
+                    <button id="replace_placa_mae">Placa Mãe</button>
+                    <div id="placamae" class="modal">
+                        <div class="modal-content">
+                            <p><ul id="lista_placa_mae" class="lista-simulador"></ul></p> 
+                        </div>
+                    </div>
                 </div>
 
                 <div id="component">
                     <img src="./resources/images/memoriaram-simulador.png" alt="Imagem de uma memória RAM">
-                    <p id="replace_ram">Memória RAM</p>
-                    <ul>
-                        <li class="imagem-seta"><img src="./resources/images/down-arrow.png"
-                                alt="Imagem de uma seta para baixo" width="30px" height="30px">
-                            <ul id="lista_ram" class="lista-simulador"></ul>
-                        </li>
-                    </ul>
+                    <button id="replace_ram">Memória RAM</button>
+                    <div id="ram" class="modal">
+                        <div class="modal-content">
+                            <p><ul id="lista_ram" class="lista-simulador"></ul></p>
+                        </div>
+                    </div>
                 </div>
 
                 <div id="component">
                     <img src="./resources/images/hd-simulador.png" alt="Imagem de um HD">
-                    <p id="replace_hd">HD</p>
-                    <ul>
-                        <li class="imagem-seta"><img src="./resources/images/down-arrow.png"
-                                alt="Imagem de uma seta para baixo" width="30px" height="30px">
-                            <ul id="lista_hd" class="lista-simulador"></ul>
-                        </li>
-                    </ul>
+                    <button id="replace_hd">HD</button>
+                    <div id="hd" class="modal">
+                        <div class="modal-content">
+                            <p><ul id="lista_hd" class="lista-simulador"></ul></p>
+                        </div>
+                    </div>
                 </div>
 
                 <div id="component">
                     <img src="./resources/images/ssd-simulador.png" alt="Imagem de um SSD">
-                    <p id="replace_ssd">SSD</p>
-                    <ul>
-                        <li class="imagem-seta"> <img src="./resources/images/down-arrow.png"
-                                alt="Imagem de uma seta para baixo" width="30px" height="30px">
-                            <ul id="lista_ssd" class="lista-simulador"></ul>
-                        </li>
-                    </ul>
+                    <button id="replace_ssd">SSD</button>
+                    <div id="ssd" class="modal">
+                        <div class="modal-content">
+                            <p><ul id="lista_ssd" class="lista-simulador"></ul></p>
+                        </div>
+                    </div>
                 </div>
 
                 <div id="component">
                     <img src="./resources/images/fonte-simulador.png" alt="Imagem de uma fonte">
-                    <p id="replace_fonte">Fonte</p>
-                    <ul>
-                        <li class="imagem-seta"><img src="./resources/images/down-arrow.png"
-                                alt="Imagem de uma seta para baixo" width="30px" height="30px">
-                            <ul id="lista_fonte" class="lista-simulador"></ul>
-                        </li>
-                    </ul>
+                    <button id="replace_fonte">Fonte</button>
+                    <div id="fonte" class="modal">
+                        <div class="modal-content">
+                            <p><ul id="lista_fonte" class="lista-simulador"></ul></p>
+                        </div>
+                    </div>
                 </div>
             </nav>
         </div>
@@ -125,8 +121,7 @@
             </div>
         </section>
 
-        <p id="texto-obs">Obs.: As informações extras só apareceram após escolher todas as peças (com exceção do HD e
-            SSD) e clicar em montar.</p>
+        <p id="texto-obs">Obs.: As informações extras só apareceram após escolher todas as peças (com exceção do HD e SSD) e clicar em montar.</p>
         <section>
             <div id="informacoes-extras">
                 <h3>Informações extras</h3>
@@ -138,9 +133,7 @@
             </div>
         </section>
     </main>
-
     <script src="./resources/js/simulador.js"></script>
-
 </body>
 
 </html>
