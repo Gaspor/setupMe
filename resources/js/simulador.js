@@ -46,6 +46,17 @@ async function clicked(value, productName, tagName) {
     await populateComputer(productName, tagName);
     changeName(productName, tagName);
     addInTotal(value);
+    setNone();
+}
+
+function setNone(){
+    proces.style.display = "none";
+    placavideo.style.display = "none";
+    placamae.style.display = "none";
+    ram.style.display = "none";
+    hd.style.display = "none";
+    ssd.style.display = "none";
+    fonte.style.display = "none";
 }
 
 async function changeName(productName, tagName) {
