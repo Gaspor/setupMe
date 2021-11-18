@@ -46,31 +46,32 @@
     zoom: 102%;
 }
 
+.slide .active {
+    animation: arrowClick 2s infinite;
+}
+
 /* setas =================================== */
 
-#setas-games {
+/* #setas-games {
     display: flex;
     justify-content: space-between;
 }
 
-#arrow {
-   margin: -14.6rem 1rem 14.6rem 1rem;
-}
+#arrow-left, #arrow-right{
+   margin: -14.6rem 1rem 14.6rem .7rem;
+} */
 
 /* animações ============================= */
 @keyframes slide {
     0%{
         left: 0px;
     }
-
     5% {
         left: 0px;
     }
-
     10% {
         left: -250px;
     }
-
     20%{
         left: -500px;
     }
@@ -90,6 +91,12 @@
         left: -1750px;
     }
     80%{
-        left: -2000px;
+        left: -2050px;
+    }
+    90% {
+        left: -2100px;
+    }
+    100% {
+        left: 0px;
     }
 }

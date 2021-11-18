@@ -1,17 +1,9 @@
-let url = "https://setupme.herokuapp.com/games";
+const goRight = document.querySelector("#arrow-left");
+const slides = document.querySelectorAll(".slide");
 
-async function getMotherboards() {
-        const response = await fetch(url)
-        const itens = await response.json();
-        console.log(itens);
-        return itens;
-}
+let currentSlide = 0;
 
-const arrows = {
-        goRight() {
-                document.querySelector("#right-arrow").classList.add("click-right");
-        },
-        goLeft() {
-                document.querySelector("#left-arrow").classList.add("click-left");
-        }
-}
+goRight.addEventListener("click", () => {
+        goRight.classList.add("active");
+});
+
