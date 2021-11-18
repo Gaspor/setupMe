@@ -88,31 +88,32 @@ main {
 
 .button {
     position: center;
-    margin-top: 1rem;
-    margin-left: -1rem;
-	background-color:#979797;
-	border-radius:6px;
-	border:1px solid #888888;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-  width: 172px;
-	padding:20px 50px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #000000;
+    margin-top: 2rem;
+    margin-right: 8rem;
+    background-color:#979797;
+    border-radius:6px;
+    border:1px solid #888888;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    width: 172px;
+    padding:20px 50px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #000000;
 }
 .button:hover {
-	background-color:#888888;
+    background-color:#888888;
 }
 .button:active {
-	position:relative;
-	top:1px;
+    position:relative;
+    top:1px;
 }
 
 #warning{
     position: center;
-    margin-top: 1rem;
-    margin-right: 1rem;
+    margin-top: 0rem;
+    margin-left: 8rem;
+    margin-right: -10.5rem;
     color:#ff0000;
 }
 
