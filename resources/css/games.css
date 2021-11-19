@@ -39,15 +39,14 @@
 
 .slide {
     position: relative;
-    animation: slide 45s infinite ease-in-out;
+    animation: slide 20s;
+    animation-delay: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
 }
 
 .slide img:hover {
     zoom: 102%;
-}
-
-.slide .active {
-    animation: arrowClick 2s infinite;
 }
 
 /* setas =================================== */
@@ -66,35 +65,32 @@
     0%{
         left: 0px;
     }
-    5% {
-        left: 0px;
-    }
     10% {
-        left: -250px;
+        left: -277px;
     }
     20%{
-        left: -500px;
+        left: -554px;
     }
     30%{
-        left: -750px;
+        left: -831px;
     }
     40%{
-        left: -1000px;
+        left: -1108px;
     }
     50%{
-        left: -1250px;
+        left: -1385px;
     }
     60%{
-        left: -1500px;
+        left: -1662px;
     }
     70%{
-        left: -1750px;
+        left: -1939px;
     }
     80%{
-        left: -2050px;
+        left: -2150px;
     }
     90% {
-        left: -2100px;
+        left: 0px;
     }
     100% {
         left: 0px;
