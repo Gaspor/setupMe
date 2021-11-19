@@ -26,7 +26,7 @@
 .slider-track {
     display: flex;
     width: calc(250px * 20);
-    animation: scroll 40s linear infinite;
+    animation: scroll 30s linear infinite;
 }
 
 .slider-track:hover {
