@@ -103,7 +103,6 @@ async function populateComputer(value, productName, tagName) {
 }
 
 function changeP() {
-    // console.log(computador.processador);
     if (computador.processador.nome == "Core i9-10900" && computador.placa_video.nome == "GeForce RTX 3060 Ti XC Gaming" && computador.placa_mae.nome == "B550M DS3H" && computador.ram.nome == "XPG Spectrix D41" && (computador.hd.nome == "HD Barracuda" || computador.ssd.nome == "M2 NVME Blue") && computador.fonte.nome == "Core Reactor") {
         document.getElementById("probabilidade").innerHTML = "O desempenho desse computador para jogos e para estudos é de aproximadamente 100%.";
         document.getElementById("sistema-operacional").innerHTML = "O sistema operacional recomendado para este computador é Windows 7/8/8.1/10 e Linux.";

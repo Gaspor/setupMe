@@ -5,6 +5,10 @@
     font-family: 'Poppins';
 }
 
+main {
+    /* margin-bottom: 7rem; */
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -151,11 +155,12 @@ html {
     border-radius: .6rem;
     text-decoration: none;
     color: black;
+    transition: zoom .5s;
 }
 
 #montar-final #botao-montar:hover {
     background: rgba(128, 128, 128, 0.342);
-    zoom: 1.1;
+    zoom: 108%;
     cursor: pointer;
 }
 
@@ -168,7 +173,6 @@ html {
 }
 
 #informacoes-extras {
-    /* visibility: hidden; */
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -179,7 +183,7 @@ html {
     border: 1px solid black;
     border-radius: .5rem;
 }
-
+    
 #informacoes-extras h3 {
     margin-top: .8rem;
 }
@@ -206,9 +210,6 @@ html {
     background-color: rgba(3, 0, 24, 0.425); /* Black w/ opacity */
   }
 
-  .modal-content p{
-    margin-left: 0.5rem;
-    margin-top: 0.5rem;
-    width: 22rem;
-    text-decoration: solid white;
+.modal-content p{
+    text-align: center;
 }

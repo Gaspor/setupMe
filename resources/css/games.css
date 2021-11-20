@@ -10,12 +10,13 @@
 .titulo {
     display: flex;
     justify-content: center;
-    margin-top: 1rem;
+    margin-top: 2rem;
 }
 
 .slider {
     height: 250px;
     margin: auto;
+    margin-top: 6rem;
     position: relative;
     width: 90%;
     display: grid;
@@ -42,9 +43,9 @@
     perspective: 100px;
 }
 
-a, img {
+.slide a, .slide img {
     width: 100%;
-    transition: transform 1s;
+    transition: transform .7s;
 }
 
 a:hover {
@@ -62,7 +63,7 @@ a:hover {
 
 .slider::before,
 .slider::after {
-    background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%,
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.8) 0%,
     rgba(255, 255, 255, 0) 100%);
     content: '';
     height: 100%;
