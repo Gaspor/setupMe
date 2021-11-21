@@ -6,7 +6,11 @@
 }
 
 main {
-    /* margin-bottom: 7rem; */
+    margin-bottom: 7rem;
+}
+
+body .active-main {
+    margin-bottom: 0;
 }
 
 html {
@@ -166,13 +170,12 @@ html {
 
 /* Informações extras */
 
-#texto-obs {
-    margin: 45rem 0 -18.5rem 2rem;
-    font-size: 1.1rem;
-    font-weight: 600;
+#informacoes-extras {
+    visibility: hidden;
 }
 
-#informacoes-extras {
+#mostrar .active {
+    visibility: visible;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -208,7 +211,7 @@ html {
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0, 0, 0); /* Fallback color */
     background-color: rgba(3, 0, 24, 0.425); /* Black w/ opacity */
-  }
+}
 
 .modal-content p{
     text-align: center;

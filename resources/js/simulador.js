@@ -5,33 +5,35 @@ let urlRAMS = "https://setupme.herokuapp.com/rams";
 let urlStorage = "https://setupme.herokuapp.com/armazenamentos";
 let urlFonte = "https://setupme.herokuapp.com/fontes";
 
+const getInformacoes = document.querySelector("#botao-montar");
+
 let computador = {
     processador: {
-        nome: "", 
+        nome: "",
         valor: ""
     },
     placa_video: {
-        nome: "", 
+        nome: "",
         valor: ""
     },
     placa_mae: {
-        nome: "", 
+        nome: "",
         valor: ""
     },
     ram: {
-        nome: "", 
+        nome: "",
         valor: ""
     },
     hd: {
-        nome: "", 
+        nome: "",
         valor: ""
     },
     ssd: {
-        nome: "", 
+        nome: "",
         valor: ""
     },
     fonte: {
-        nome: "", 
+        nome: "",
         valor: ""
     },
 }
@@ -49,6 +51,19 @@ async function setJson(url, tagName) {
 }
 
 async function populateDropdown(JSON, tagName) {
+
+    for (let i = 0; i < JSON.length; i++) {
+        if (tagName == "armazenamento") {
+            if (!JSON[i].m2) {
+                document.getElementById(`lista_hd`).innerHTML = "";
+            } else {
+                document.getElementById(`lista_ssd`).innerHTML = "";
+            }
+        } else {
+            document.getElementById(`lista_${tagName}`).innerHTML = "";
+        }
+    }
+
     for (let i = 0; i < JSON.length; i++) {
         const preco = JSON[i].preco;
         const nome = JSON[i].nome;
@@ -69,12 +84,13 @@ async function populateDropdown(JSON, tagName) {
 
 async function clicked(value, productName, tagName) {
     if (computador[tagName].nome != "") {
-        addInTotal(-computador[tagName].valor);    
+        addInTotal(-computador[tagName].valor);
     }
     await populateComputer(value, productName, tagName);
     changeName(productName, tagName);
     addInTotal(value);
     setNone();
+    await getCompatibility(productName, tagName);
 }
 
 function setNone() {
@@ -102,28 +118,33 @@ async function populateComputer(value, productName, tagName) {
     computador[tagName].valor = value
 }
 
-function changeP() {
-    if (computador.processador.nome == "Core i9-10900" && computador.placa_video.nome == "GeForce RTX 3060 Ti XC Gaming" && computador.placa_mae.nome == "B550M DS3H" && computador.ram.nome == "XPG Spectrix D41" && (computador.hd.nome == "HD Barracuda" || computador.ssd.nome == "M2 NVME Blue") && computador.fonte.nome == "Core Reactor") {
-        document.getElementById("probabilidade").innerHTML = "O desempenho desse computador para jogos e para estudos é de aproximadamente 100%.";
-        document.getElementById("sistema-operacional").innerHTML = "O sistema operacional recomendado para este computador é Windows 7/8/8.1/10 e Linux.";
-        document.getElementById("internet").innerHTML = "O plano de internet recomendado para este computador é de 10 a 50 megas.";
+async function getCompatibility(productName, tagName) {
+    let url = "";
+    if (tagName == "processador" || tagName == "ram") {
+        url = "https://setupme.herokuapp.com/compatibility/" + tagName + "/" + productName;
+        let returnJson = await getJson(url);
+        console.log(returnJson);
+        populateDropdown(returnJson, "placa_mae");
     }
-    if (computador.processador.nome == "Core i7-11700F" && computador.placa_video.nome == "GeForce GTX 1650" && computador.placa_mae.nome == "ROG Strix X570-E Gaming" && computador.ram.nome == "Patriot Viper Elite" && (computador.hd.nome == "HD BarraCuda" || computador.ssd.nome == "M2 NVME SX6000 Lite") && computador.fonte.nome == "GP-P550B") {
-        document.getElementById("probabilidade").innerHTML = "O desempenho desse computador para jogos e para estudos é de aproximadamente 90%.";
-        document.getElementById("sistema-operacional").innerHTML = "O sistema operacional recomendado para este computador é Windows 7/8/8.1/10 e Linux.";
-        document.getElementById("internet").innerHTML = "O plano de internet recomendado é de 10 a 50 megas.";
+    if (tagName == "placa_mae") {
+        url = "https://setupme.herokuapp.com/compatibility/placa_mae/" + productName;
+        let returnJson = await getJson(url);
+        console.log(returnJson);
+        populateDropdown(returnJson[0].processadores, "processador");
+        populateDropdown(returnJson[0].rams, "ram");
     }
-    if (computador.processador.nome == "Ryzen 5 5600X" && computador.placa_video.nome == "Dual RX 6600 XT O8G" && computador.placa_mae.nome == "ROG MAXIMUS XII FORMULA" && computador.ram.nome == "PNY Performance" && (computador.hd.nome == "HD BarraCuda" || computador.ssd.nome == "M2 NVME SX6000 Lite") && computador.fonte.nome == "GP-P550B") {
-        document.getElementById("probabilidade").innerHTML = "O desempenho desse computador para jogos e para estudos é de aproximadamente 80%.";
-        document.getElementById("sistema-operacional").innerHTML = "O sistema operacional recomendado para este computador é Windows 7/8/8.1/10 e Linux.";
-        document.getElementById("internet").innerHTML = "O plano de internet recomendado é de 10 a 50 megas.";
-    }
-    if (computador.processador.nome == "Ryzen 5 3600" && computador.placa_video.nome == "Radeon RX 6900XT Limited Black Gaming" && computador.placa_mae.nome == "MPG Z490 GAMING CARBON WIFI" && computador.ram.nome == "PNY Performance" && (computador.hd.nome == "HD BarraCuda" || computador.ssd.nome == "M2 NVME SX6000 Lite") && computador.fonte.nome == "GP-P550B") {
-        document.getElementById("probabilidade").innerHTML = "O desempenho desse computador para jogos e para estudos é de aproximadamente 70%.";
-        document.getElementById("sistema-operacional").innerHTML = "O sistema operacional recomendado para este computador é Windows 7/8/8.1/10 e Linux.";
-        document.getElementById("internet").innerHTML = "O plano de internet recomendado é de 10 a 50 megas.";
+    if (tagName == "placa_video") {
+        url = "https://setupme.herokuapp.com/compatibility/placa_video/" + productName;
+        let returnJson = await getJson(url);
+        console.log(returnJson);
+        populateDropdown(returnJson, "fonte");
     }
 }
+
+getInformacoes.addEventListener("click", () => {
+    document.querySelector("#informacoes-extras").classList.add("active");
+    document.querySelector("#main").classList.add("active-main");
+})
 
 setJson(urlProcessador, "processador");
 setJson(urlPlaca_video, "placa_video");
@@ -218,27 +239,27 @@ window.onclick = function (event) {
         proces.style.display = "none";
     }
 
-    else if(event.target == placavideo){
+    else if (event.target == placavideo) {
         placavideo.style.display = "none";
     }
 
-    else if(event.target == placamae){
+    else if (event.target == placamae) {
         placamae.style.display = "none";
     }
 
-    else if(event.target == ram){
+    else if (event.target == ram) {
         ram.style.display = "none";
     }
 
-    else if(event.target == hd){
+    else if (event.target == hd) {
         hd.style.display = "none";
     }
 
-    else if(event.target == ssd){
+    else if (event.target == ssd) {
         ssd.style.display = "none";
     }
 
-    else if(event.target == fonte){
+    else if (event.target == fonte) {
         fonte.style.display = "none";
     }
 }

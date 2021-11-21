@@ -1,13 +1,14 @@
 /* Global ============================================================ */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins';
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins';
 }
 
 body {
-    background: white;
+  background: white;
+  overflow-x: hidden;
 }
 
 main {
@@ -21,101 +22,101 @@ main {
 
 /* caixa de montagem */ 
 #caixa {    
-    display: flex;
-    justify-content: row;
-    position: relative;
-    overflow: hidden;
-    margin-right: 6rem;
-    margin-top: 2rem;
-    left: 45px;
-    border-radius: 2px;
-    flex-direction: row;
-    background: #fdfdfdda;
-    padding: 20px; 
-    width: 350px;
-    height: 400px;  
-    box-shadow: 1px 1px 1px 2px rgba(0, 0, 0, 0.274);
-  }
+  display: flex;
+  justify-content: row;
+  position: relative;
+  overflow: hidden;
+  margin-right: 6rem;
+  margin-top: 2rem;
+  left: 45px;
+  border-radius: 2px;
+  flex-direction: row;
+  background: #fdfdfdda;
+  padding: 20px; 
+  width: 350px;
+  height: 400px;  
+  box-shadow: 1px 1px 1px 2px rgba(0, 0, 0, 0.274);
+}
 
-  #caixa h3{
-      display: flex;
-      justify-content: center;
-      margin-left: 7.5rem;
-  }
+#caixa h3{
+  display: flex;
+  justify-content: center;
+  margin-left: 7.5rem;
+}
 
-  #caixa img{
-    position: absolute;
-    margin: 2.5rem 0 0 0;
-  }
+#caixa img{
+  position: absolute;
+  margin: 2.5rem 0 0 0;
+}
 
-  #caixa .medio{
-    margin: 2.5rem 0 0 .3rem;
-  }
+#caixa .medio{
+  margin: 2.5rem 0 0 .3rem;
+}
 
-  #caixa .tituloavançado{
-    display: flex;
-    justify-content: center;
-    margin-left: 7.5rem;
-  }
+#caixa .tituloavançado{
+  display: flex;
+  justify-content: center;
+  margin-left: 7.5rem;
+}
 
-  #caixa .avancado{
-    margin: 2.5rem .6rem 0 0;
-  }
+#caixa .avancado{
+  margin: 2.5rem .6rem 0 0;
+}
 
-  #caixa input{
-      margin: 13rem 0 0 6rem;
-      position: absolute;
-  }
+#caixa input{
+  margin: 13rem 0 0 6rem;
+  position: absolute;
+}
 
-  #caixa label{
-    position: absolute;
-    margin: 12.6rem 0 0 7.5rem;
-  }
+#caixa label{
+  position: absolute;
+  margin: 12.6rem 0 0 7.5rem;
+}
 
-  #caixa p{
-    position: absolute;
-    margin: 16rem 0 0 -.8rem;
-  }
-
+#caixa p{
+  position: absolute;
+  margin: 16rem 0 0 -.8rem;
+}
 
 /* botão */
 
 #container-botao {
+  position: center;
   display: flex;
   justify-content: center;
-  margin-top: 1.8rem;
 }
 
 .button {
-    position: center;
-    margin-top: 2rem;
-    margin-right: 0rem;
-    background-color:#979797;
-    border-radius:6px;
-    border:1px solid #888888;
-    display:inline-block;
-    cursor:pointer;
-    color:#ffffff;
-    width: 172px;
-    padding:20px 50px;
-    text-decoration:none;
-    text-shadow:0px 1px 0px #000000;
-    z-index: 1;
+  margin: auto;
+  margin-top: 1rem;
+  background-color:#979797;
+  border-radius: 6px;
+  border:1px solid #888888;
+  cursor:pointer;
+  color:#ffffff;
+  width: 172px;
+  padding:20px 50px;
+  text-decoration:none;
+  text-shadow:0px 1px 0px #000000;
+  z-index: 1;
 }
+
 .button:hover {
-    background-color:#888888;
-}
-.button:active {
-  position: relative;
-  top:1px;
+  background-color:#888888;
 }
 
 #warning{
-    position: center;
-    margin-top: 0rem;
-    margin-left: 0rem;
-    margin-right: -10.5rem;
-    color:#ff0000;
+  visibility: hidden;
+  color:#ff0000;
+}
+
+#botao-warning {
+  display: flex;
+  justify-content: center;
+}
+
+#botao-warning .active {
+  visibility: visible;
 }
 
 @media(min-width: 830px) {

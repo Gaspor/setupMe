@@ -1,4 +1,4 @@
-
+let botao = document.querySelector(".button");
 var check = false;
 function checkBasico() {
     let buttons = document.querySelector("#basico");
@@ -23,11 +23,9 @@ function checkAvancado() {
         check = true;
         window.location.href = "montagem-avancado.html";
     } 
-} 
-
-function noCheck(){
-    if(check == false){
-        document.querySelector("#warning").innerHTML = `<div> Marque uma opção! </div>`;
-    }
 }
+
+botao.addEventListener("click", () => {
+    document.querySelector("#warning").classList.add("active");
+})
 

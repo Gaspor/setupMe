@@ -12,6 +12,6 @@
 
   - :speech_balloon: Lucas Filgueiras: [:computer: Github](https://github.com/LucasFilgueiras)(Frontend)
 
-  - :speech_balloon: Felipe Verneck: [:computer: Github](https://github.com/FelipeVerneck)(Frontend)
+  - :speech_balloon: Felipe Verneck: [:computer: Github](https://github.com/FelipeVerneck)(Full-Stack)
 
   - :speech_balloon: Maxsuel: [:computer: Github](https://github.com/X86Max)(Frontend)

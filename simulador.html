@@ -28,7 +28,7 @@
         <p>Monte do seu jeito</p>
     </div>
 
-    <main>
+    <main id="main">
         <div id="container">
             <nav class="menu-simulador">
 
@@ -123,12 +123,11 @@
 
         <section>
             <div id="montar-final">
-                <a href="#informacoes-extras" onclick="changeP(), informationVisible ()" id="botao-montar">Montar</a>
+                <a href="#informacoes-extras" onclick="changeP()" id="botao-montar">Montar</a>
             </div>
         </section>
 
-        <p id="texto-obs">Obs.: As informações extras só apareceram após escolher todas as peças (com exceção do HD e SSD) e clicar em montar.</p>
-        <section>
+        <section id="mostrar">
             <div id="informacoes-extras">
                 <h3>Informações extras</h3>
                 <div id="container-informacoes">
