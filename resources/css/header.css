@@ -29,7 +29,7 @@ header {
     font-size: 1.3rem;
     height: 1.3rem;
     margin-bottom: 0.6rem;
-    z-index: 1;
+    z-index: 3;
     margin-right: 6rem;
 }
 
