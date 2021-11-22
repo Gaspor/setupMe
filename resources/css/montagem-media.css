@@ -19,7 +19,7 @@ h1 {
     border: 1px solid black;
     margin-left: 25%;
     margin-right: 25%;
-    border-radius: 2px;
+    border-radius: 0.8rem;
     background: #fdfdfdda;
     box-shadow: 1px 1px 1px 2px rgb(0 0 0 / 0.50);
 }
@@ -31,4 +31,25 @@ h1 {
     justify-content: center;
     align-items:center;
     font-weight: 500;
+}
+
+#voltar-profissional {
+   display: flex;
+   justify-content: center;
+   margin: 5rem 0 0 0;
+}
+
+#voltar-profissional a {
+    text-decoration: none;
+    color: black;
+    background: rgba(151, 151, 151, 0.212);
+    padding: 1rem 1rem;
+    border-radius: .8rem;
+    border: 1px solid black;
+    font-size: 1.1rem;
+}
+
+#voltar-profissional a:hover {
+    zoom: 102%;
+    background: rgba(151, 151, 151, 0.397);
 }
