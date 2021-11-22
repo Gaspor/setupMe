@@ -224,3 +224,16 @@ html {
         margin-right: 2rem;
     }
 }
+
+@media(max-width: 730px){
+        #total-container{
+        margin-top: 3rem;
+        margin-left: 8.5rem;
+    }
+
+    #montar-final{
+       margin-top: 4rem;
+       margin-left: 8.5rem;
+
+    }
+}
