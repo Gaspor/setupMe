@@ -216,3 +216,11 @@ html {
 .modal-content p{
     text-align: center;
 }
+
+@media(max-width: 1000px){
+    .lista-simulador li{
+        width: auto;
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+}
