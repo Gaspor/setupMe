@@ -26,6 +26,9 @@ function checkAvancado() {
 }
 
 botao.addEventListener("click", () => {
-    document.querySelector("#warning").classList.add("active");
+    if (!check){
+        document.querySelector("#warning").classList.add("active");
+
+    }
 })
 
