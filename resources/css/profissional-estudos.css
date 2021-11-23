@@ -1,11 +1,5 @@
 /* Global ============================================================ */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins';
-}
-
+/*
 body {
   background: white;
   overflow-x: hidden;
@@ -21,7 +15,7 @@ main {
 }
 
 /* caixa de montagem */ 
-#caixa {    
+/*#caixa {    
   display: flex;
   justify-content: row;
   position: relative;
@@ -80,6 +74,46 @@ main {
 
 /* botão */
 
+/*@media(min-width: 830px) {
+    .caixas {
+        display: flex;
+        flex-direction: row;
+    }
+}*/
+
+body {
+  justify-content: center;
+  overflow-x: hidden;
+}
+
+.caixas {
+  display: grid;
+  justify-content: row;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 20px;
+}
+
+#caixa {
+  max-width: 433px;
+  min-width: 25%;
+  justify-content: center;
+  display: grid;
+  margin: 15px 3% 0px 3%;
+  border-radius: 2px;
+  position: relative;
+  box-shadow: 1px 1px 1px 2px rgba(0, 0, 0, 0.274);
+}
+
+.caixas h3, #radio-button, .image, p {
+  margin: 0px auto 0px auto;
+}
+
+.caixas p {
+  font-size: 120%;
+  margin-left: 3%;
+  margin-right: 3%;
+}
+
 #container-botao {
   position: center;
   display: flex;
@@ -101,10 +135,6 @@ main {
   z-index: 1;
 }
 
-.button:hover {
-  background-color:#888888;
-}
-
 #warning{
   visibility: hidden;
   color:#ff0000;
@@ -119,12 +149,18 @@ main {
   visibility: visible;
 }
 
-@media(min-width: 830px) {
-    .caixas {
-        display: flex;
-        flex-direction: row;
-    }
+@media screen and (max-width: 1200px) {
+  .caixas {
+    flex-direction: column;
+    margin: 20px 0% 0px 0%;
+  
+  }
+
+  #caixa {
+    max-width: 300px;
+    margin: auto;
+  }
+  .caixas .image {
+    width: 90%;
+  }
 }
-
-
-

@@ -1,36 +1,26 @@
 * {
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins';
 }
 
 header {
     display: flex;
+    background: white;
     align-items: center;
     justify-content: space-between;
-    background: white;
     width: 100%;
     height: 4.3rem;
     box-shadow: 0 0 0.5rem 0 rgba(0,0,0,1);
 }
 
-#simulador {
-    font-size: 1.3rem;
-    margin-top: 0.4rem;
-    margin-right: 2.5rem;
-    font-weight: 800;
-}
-
-#simulador:hover{
-    zoom: 101%;
-}
-
 .menu {
     font-size: 1.3rem;
     height: 1.3rem;
-    margin-bottom: 0.6rem;
+    margin-bottom: 7%;
     z-index: 3;
-    margin-right: 6rem;
+    margin-right: 2px;
 }
 
 .menu ul {
@@ -38,21 +28,21 @@ header {
     position: relative;
     background: white;
     border-radius: 0.4rem;
+    margin-right: 2px;
 }
 
 .menu ul li {
-    width: 150px;
+    width: 100%;
 }
 
 .menu a {
-    padding: 17px;
+    padding: 10px;
     display: block;
     text-align: center;
     text-decoration: none;
     color: black;
-    border: 1px solid black;
-    border-bottom: none;
-    border-top: none;
+    border: .5px solid black;
+
 }
 
 .menu:hover {
@@ -92,13 +82,30 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+
 }
 
-/* input {
-    margin: 2.5rem;
-    border-radius: 2.5rem;
-    height: 1.4rem;
-} */
+@media (max-width: 600px) {
+    .logo img{
+        width: 100px;
+    }
+    .menu img{
+        width: 100px;
+    }
+    #simulador {
+        width: 80px;
+        margin-bottom: 4%;
+    }
+
+    .menu ul li {
+        width: 100px;
+
+    }
+
+    .menu {
+        font-size: .85rem;
+    }
+}
 
 /* Barra de pesquisa ==================================================== */
 
@@ -125,18 +132,3 @@ header {
 .search-txt:hover {
     box-shadow: 0.2rem 0.2rem 0.2rem 0.2rem rgba(0,0,0,0.2);
 } */
-
-@media (max-width: 600px) {
-    .logo img{
-        width: 100px;
-    }
-    .menu img{
-        width: 100px;
-    }
-    .search-box {
-        visibility: hidden;
-    }
-    .container-simulador img {
-        width: 100px;
-    }
-}
