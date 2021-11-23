@@ -96,6 +96,7 @@ async function populateDropdown(JSON, tagName) {
 async function clicked(value, productName, tagName, rams) {
     if (computador[tagName].nome != productName) {
         await addPlusButton(tagName);
+        addInTotal(-computador[tagName].valor)
         await populateComputer(value, productName, tagName);
         changeName(productName, tagName);
         addInTotal(value);
