@@ -162,21 +162,8 @@ body {
     margin: auto;
     
   }
-
+  
   .caixas .image {
     width: 90%;
-
-  }
-
-  #caixa:last-child {
-    margin: 0 -50% 0 50%;
-
-  }
-}
-
-@media screen and (max-width: 519px) {
-  #caixa:last-child {
-    margin: auto;
-
   }
 }
