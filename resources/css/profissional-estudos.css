@@ -91,6 +91,7 @@ body {
   justify-content: row;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: 20px;
+  grid-column: calc(1/2);
 }
 
 #caixa {
@@ -152,15 +153,30 @@ body {
 @media screen and (max-width: 1200px) {
   .caixas {
     flex-direction: column;
-    margin: 20px 0% 0px 0%;
+    margin: 20px auto auto auto;
   
   }
 
   #caixa {
     max-width: 300px;
     margin: auto;
+    
   }
+
   .caixas .image {
     width: 90%;
+
+  }
+
+  #caixa:last-child {
+    margin: 0 -50% 0 50%;
+
+  }
+}
+
+@media screen and (max-width: 519px) {
+  #caixa:last-child {
+    margin: auto;
+
   }
 }
