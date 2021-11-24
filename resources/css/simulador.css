@@ -53,17 +53,13 @@ html {
 
 .lista-simulador li{
     list-style: none;
-    margin-top: 7px;
-    margin-bottom: 7px;
+    margin: 15px auto 15px auto;
     position: center;
-    margin-left: 13rem;
     width: 22rem;
     height: 3rem;
-    background-color: black;
-    background-image: linear-gradient(to right,  rgba(210, 210, 210, 0.9), rgba(180, 180, 180, 0.9), rgba(150, 150, 150, 0.8), rgba(130, 130, 130, 0.8));
+    background-color: rgba(128, 128, 128, 0.171);
     border-radius: 5px 5px 5px 5px;
-    border: 0.5px solid rgba(255, 255, 255, 0.5);
-    box-shadow: 0 0 0.5rem 0 rgba(211, 211, 211, 0.301);
+    box-shadow: 0.2rem 0.2rem 0.2rem 0.2rem rgb(0 0 0 / 20%)
 }
 
 .menu-simulador ul ul {
@@ -101,7 +97,6 @@ html {
 }
 
 /* container do total das peças */
-
 #total-container {
     display: flex;
     justify-content: center;
@@ -186,6 +181,7 @@ html {
 
 #informacoes-extras p {
     margin-top: 1.8rem;
+    text-align: center;
 }
 
 #container-informacoes {
@@ -208,6 +204,32 @@ html {
 
 .modal-content p{
     text-align: center;
+}
+
+#qtd {
+    visibility: hidden;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(197, 197, 197, 0.425);
+}
+
+#qtdRam {
+    margin: 15% 10% auto 10%;
+
+}
+
+#component #plus-button, #component #minus-button {
+    margin: 4px;
+    width: 45px;
+    height: 45px;
+    /*border-radius: 50%;
+    border: 1px solid rgb(102, 228, 102);
+    background-color: rgb(102, 228, 102);*/
+}
+
+#plus-text , #minus-text {
+    color: rgb(21, 138, 21);
+    font-size: 300%;
 }
 
 @media(max-width: 1000px){

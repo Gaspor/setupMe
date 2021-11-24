@@ -44,7 +44,7 @@ main {
 
 .slide {
     width: 20%;
-    transition: 2s;
+    transition: 1.5s;
 }
 
 .slide img {

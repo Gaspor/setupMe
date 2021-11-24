@@ -8,6 +8,7 @@ let urlFonte = "https://setupme.herokuapp.com/fontes";
 const scoreMax = 20;
 
 const getInformacoes = document.querySelector("#botao-montar");
+const qtdButtons = document.querySelector("#qtd");
 
 let computador = {
     processador: {
@@ -22,11 +23,13 @@ let computador = {
     },
     placa_mae: {
         nome: "",
-        valor: ""
+        valor: "",
+        qtdRam: 0
     },
     ram: {
         nome: "",
-        valor: ""
+        valor: 0,
+        qtd: 0
     },
     hd: {
         nome: "",
@@ -54,7 +57,7 @@ async function setJson(url, tagName) {
 }
 
 async function populateDropdown(JSON, tagName) {
-
+    //console.log(JSON);
     for (let i = 0; i < JSON.length; i++) {
         if (tagName == "armazenamento") {
             if (!JSON[i].m2) {
@@ -68,32 +71,87 @@ async function populateDropdown(JSON, tagName) {
     }
 
     for (let i = 0; i < JSON.length; i++) {
-        const preco = JSON[i].preco;
-        const nome = JSON[i].nome;
-        const gbs = JSON[i].gbs;
+        const preco = JSON[i].preco != 0 ? JSON[i].preco.toFixed(2) : JSON[i].preco;
+        let nome = JSON[i].nome;
+        let rams = 0;
 
-        if (tagName == "armazenamento") {
-            const storagePrefix = JSON[i].gb >= 128 ? "GB" : "TB";
-            if (!JSON[i].m2) {
-                document.getElementById(`lista_hd`).innerHTML += '<li class="hd"><p onclick="clicked(\'' + preco + '\',\'' + nome + '\',\'' + "hd" + '\')">' + nome + ' ' + storagePrefix + ' ' + JSON[i].gb + '</p></li>';
-            } else {
-                document.getElementById(`lista_ssd`).innerHTML += '<li class="ssd"><p onclick="clicked(\'' + preco + '\',\'' + nome + '\',\'' + "ssd" + '\')">' + nome + ' ' + storagePrefix + ' ' + JSON[i].gb + '</p></li>';
-            }
-        } else {
-            document.getElementById(`lista_${tagName}`).innerHTML += '<li class="' + tagName + '"><p onclick="clicked(\'' + preco + '\',\'' + nome + '\',\'' + tagName + '\')">' + nome + '</p></li>';
+        if (tagName == "placa_mae") {
+            rams = JSON[i].slotsDeMemoria;
         }
+
+        //if (JSON[i].preco > 0) {
+            if (tagName == "armazenamento") {
+                const storagePrefix = JSON[i].gb >= 128 ? "GB" : "TB";
+                nome = nome + " " + JSON[i].gb + " " + storagePrefix;
+                if (!JSON[i].m2) {
+                    document.getElementById(`lista_hd`).innerHTML += '<li class="hd"><p onclick="clicked(\'' + preco + '\',\'' + nome + '\',\'' + "hd" + '\')">' + nome + ' ' + '</p><p id=preco-peca> R$ ' + preco + '</p></li>';
+                } else {
+                    document.getElementById(`lista_ssd`).innerHTML += '<li class="ssd"><p onclick="clicked(\'' + preco + '\',\'' + nome + '\',\'' + "ssd" + '\')">' + nome + ' ' + '</p><p id=preco-peca> R$ ' + preco + '</p></li>';
+                }
+            } else {
+                if (tagName == "ram") {
+                    const gbs = JSON[i].gbs;
+                    nome = nome + " " + gbs + "GB";
+                }
+                if (tagName == "fonte") {
+                    const watts = JSON[i].watts;
+                    nome = nome + " " + watts + "W";
+                }
+                document.getElementById(`lista_${tagName}`).innerHTML += '<li class="' + tagName + '"><p onclick="clicked(\'' + preco + '\',\'' + nome + '\',\'' + tagName + '\' ,\'' + rams + '\')">' + nome + '</p><p id=preco-peca> R$ ' + preco + '</p></li>';
+            }
+        //}
     }
 }
 
-async function clicked(value, productName, tagName) {
-    if (computador[tagName].nome != "") {
-        addInTotal(-computador[tagName].valor);
+async function clicked(value, productName, tagName, rams) {
+    if (computador[tagName].nome != productName) {
+        await addPlusButton(tagName);
+        addInTotal(-computador[tagName].valor)
+        await populateComputer(value, productName, tagName);
+        changeName(productName, tagName);
+        addInTotal(value);
+        setNone();
+        await getCompatibility(productName, tagName);
+        if (tagName == "placa_mae") {
+            computador.placa_mae.qtdRam = rams;
+
+        }
+        
+    } else {
+        setNone();
     }
-    await populateComputer(value, productName, tagName);
-    changeName(productName, tagName);
-    addInTotal(value);
-    setNone();
-    await getCompatibility(productName, tagName);
+    
+}
+
+async function addPlusButton(tagName) {
+    if (tagName == "ram") {
+        const aux = computador.ram.qtd * computador.ram.valor;
+        addInTotal(-aux);
+        computador.ram.qtd = 1;
+        updateRamQtd();
+        qtd.style.visibility = "visible";
+
+    }
+}
+
+function addRam() {
+    if (computador.ram.qtd < computador.placa_mae.qtdRam) {
+        computador.ram.qtd++;
+        addInTotal(computador.ram.valor);
+        updateRamQtd();
+    }
+}
+
+function removeRam() {
+    if (computador.ram.qtd > 0) {
+    computador.ram.qtd--;
+    addInTotal(-computador.ram.valor);
+    updateRamQtd();
+    }
+}
+
+async function updateRamQtd() {
+    document.getElementById("qtdRam").innerHTML = computador.ram.qtd;
 }
 
 function setNone() {
@@ -151,20 +209,26 @@ async function getCompatibility(productName, tagName) {
         url = "https://setupme.herokuapp.com/compatibility/" + tagName + "/" + productName;
         let returnJson = await getJson(url);
         console.log(returnJson);
-        populateDropdown(returnJson, "placa_mae");
+        populateDropdown(returnJson[0], "placa_mae");
     }
     if (tagName == "placa_mae") {
         url = "https://setupme.herokuapp.com/compatibility/placa_mae/" + productName;
         let returnJson = await getJson(url);
-        console.log(returnJson);
+        //console.log(returnJson);
         populateDropdown(returnJson[0].processadores, "processador");
         populateDropdown(returnJson[0].rams, "ram");
     }
     if (tagName == "placa_video") {
         url = "https://setupme.herokuapp.com/compatibility/placa_video/" + productName;
         let returnJson = await getJson(url);
-        console.log(returnJson);
-        populateDropdown(returnJson, "fonte");
+        //console.log(returnJson);
+        populateDropdown(returnJson[0], "fonte");
+    }
+    if (tagName == "fonte") {
+        url = "https://setupme.herokuapp.com/compatibility/fonte/" + productName;
+        let returnJson = await getJson(url);
+        //console.log(returnJson);
+        populateDropdown(returnJson[0], "placa_video");
     }
 }
 
@@ -174,8 +238,8 @@ getInformacoes.addEventListener("click", () => {
     document.querySelector("#informacoes-extras").classList.add("active");
     document.querySelector("#main").classList.add("active-main");
     document.querySelector("#probabilidade").innerHTML = `Este computador tem o desempenho de ${probabilidade}% em jogos e estudos.`;
-    document.querySelector("#sistema-operacional").innerHTML = `O sistema operacional é algo pessoal, para saber mais sobre isso consulte este <a href="https://recoverit.wondershare.com.br/computer-tips/linux-vs-windows.html"> link.</a>`;
-    document.querySelector("#internet").innerHTML = `O plano de internet é algo pessoal, para saber qual o melhor para sua ocasiao consulte este <a href="https://melhorplano.net"> link.</a>`;
+    document.querySelector("#sistema-operacional").innerHTML = `O sistema operacional é algo pessoal, para saber mais sobre isso consulte este <a href="https://recoverit.wondershare.com.br/computer-tips/linux-vs-windows.html" target="_blank"> link.</a>`;
+    document.querySelector("#internet").innerHTML = `O plano de internet é algo pessoal, para saber qual o melhor para sua ocasiao consulte este <a href="https://melhorplano.net" target="_blank"> link.</a>`;
 });
 
 setJson(urlProcessador, "processador");

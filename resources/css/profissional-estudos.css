@@ -1,86 +1,4 @@
 /* Global ============================================================ */
-/*
-body {
-  background: white;
-  overflow-x: hidden;
-}
-
-main {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* caixa de montagem */ 
-/*#caixa {    
-  display: flex;
-  justify-content: row;
-  position: relative;
-  overflow: hidden;
-  margin-right: 6rem;
-  margin-top: 2rem;
-  left: 45px;
-  border-radius: 2px;
-  flex-direction: row;
-  background: #fdfdfdda;
-  padding: 20px; 
-  width: 350px;
-  height: 400px;  
-  box-shadow: 1px 1px 1px 2px rgba(0, 0, 0, 0.274);
-}
-
-#caixa h3{
-  display: flex;
-  justify-content: center;
-  margin-left: 7.5rem;
-}
-
-#caixa img{
-  position: absolute;
-  margin: 2.5rem 0 0 0;
-}
-
-#caixa .medio{
-  margin: 2.5rem 0 0 .3rem;
-}
-
-#caixa .tituloavançado{
-  display: flex;
-  justify-content: center;
-  margin-left: 7.5rem;
-}
-
-#caixa .avancado{
-  margin: 2.5rem .6rem 0 0;
-}
-
-#caixa input{
-  margin: 13rem 0 0 6rem;
-  position: absolute;
-}
-
-#caixa label{
-  position: absolute;
-  margin: 12.6rem 0 0 7.5rem;
-}
-
-#caixa p{
-  position: absolute;
-  margin: 16rem 0 0 -.8rem;
-}
-
-/* botão */
-
-/*@media(min-width: 830px) {
-    .caixas {
-        display: flex;
-        flex-direction: row;
-    }
-}*/
-
 body {
   justify-content: center;
   overflow-x: hidden;
@@ -114,7 +32,7 @@ body {
 }
 
 .caixas p {
-  font-size: 120%;
+  font-size: 100%;
   margin-left: 3%;
   margin-right: 3%;
 }
