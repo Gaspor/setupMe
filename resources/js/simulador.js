@@ -5,16 +5,20 @@ let urlRAMS = "https://setupme.herokuapp.com/rams";
 let urlStorage = "https://setupme.herokuapp.com/armazenamentos";
 let urlFonte = "https://setupme.herokuapp.com/fontes";
 
+const scoreMax = 20;
+
 const getInformacoes = document.querySelector("#botao-montar");
 
 let computador = {
     processador: {
         nome: "",
-        valor: ""
+        valor: "",
+        score: 0
     },
     placa_video: {
         nome: "",
-        valor: ""
+        valor: "",
+        score: 0
     },
     placa_mae: {
         nome: "",
@@ -46,7 +50,6 @@ async function getJson(url) {
 
 async function setJson(url, tagName) {
     const JSON = await getJson(url);
-
     await populateDropdown(JSON, tagName);
 }
 
@@ -116,6 +119,30 @@ async function addInTotal(value) {
 async function populateComputer(value, productName, tagName) {
     computador[tagName].nome = productName;
     computador[tagName].valor = value
+    if (computador[tagName].nome == "Core i7-11700F"){
+        computador[tagName].score = 7;
+    }
+    if (computador[tagName].nome == "Core i9-10900") {
+        computador[tagName].score = 10;
+    }
+    if (computador[tagName].nome == "Ryzen 5 3600") {
+        computador[tagName].score = 6;
+    }
+    if (computador[tagName].nome == "Ryzen 5 5600X") {
+        computador[tagName].score = 10;
+    }
+    if (computador[tagName].nome == "GeForce RTX 3060 Ti XC Gaming") {
+        computador[tagName].score = 10;
+    }
+    if (computador[tagName].nome == "Dual RX 6600 XT O8G") {
+        computador[tagName].score = 8;
+    }
+    if (computador[tagName].nome == "GeForce GTX 1650") {
+        computador[tagName].score = 6;
+    }
+    if (computador[tagName].nome == "Radeon RX 6900XT Limited Black Gaming") {
+        computador[tagName].score = 10;
+    }
 }
 
 async function getCompatibility(productName, tagName) {
@@ -142,9 +169,14 @@ async function getCompatibility(productName, tagName) {
 }
 
 getInformacoes.addEventListener("click", () => {
+    const scoreTotal = computador.processador.score + computador.placa_video.score;
+    const probabilidade = (100/scoreMax) * scoreTotal;
     document.querySelector("#informacoes-extras").classList.add("active");
     document.querySelector("#main").classList.add("active-main");
-})
+    document.querySelector("#probabilidade").innerHTML = `Este computador tem o desempenho de ${probabilidade}% em jogos e estudos.`;
+    document.querySelector("#sistema-operacional").innerHTML = `O sistema operacional é algo pessoal, para saber mais sobre isso consulte este <a href="https://recoverit.wondershare.com.br/computer-tips/linux-vs-windows.html"> link.</a>`;
+    document.querySelector("#internet").innerHTML = `O plano de internet é algo pessoal, para saber qual o melhor para sua ocasiao consulte este <a href="https://melhorplano.net"> link.</a>`;
+});
 
 setJson(urlProcessador, "processador");
 setJson(urlPlaca_video, "placa_video");

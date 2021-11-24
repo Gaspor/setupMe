@@ -86,6 +86,10 @@ body {
   overflow-x: hidden;
 }
 
+.opcoes {
+  margin: 3rem 3rem 0 3rem;
+}
+
 .caixas {
   display: grid;
   justify-content: row;
