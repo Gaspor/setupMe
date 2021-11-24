@@ -84,9 +84,9 @@ async function populateDropdown(JSON, tagName) {
                 const storagePrefix = JSON[i].gb >= 128 ? "GB" : "TB";
                 nome = nome + " " + JSON[i].gb + " " + storagePrefix;
                 if (!JSON[i].m2) {
-                    document.getElementById(`lista_hd`).innerHTML += '<li class="hd"><p onclick="clicked(\'' + preco + '\',\'' + nome + '\',\'' + "hd" + '\')">' + nome + ' ' + '</p><p id=preco-peca> R$ ' + preco + '</p></li>';
+                    document.getElementById(`lista_hd`).innerHTML += '<li onclick="clicked(\'' + preco + '\',\'' + nome + '\',\'' + "hd" + '\')" class="hd"><p>' + nome + ' ' + '</p><p id=preco-peca> R$ ' + preco + '</p></li>';
                 } else {
-                    document.getElementById(`lista_ssd`).innerHTML += '<li class="ssd"><p onclick="clicked(\'' + preco + '\',\'' + nome + '\',\'' + "ssd" + '\')">' + nome + ' ' + '</p><p id=preco-peca> R$ ' + preco + '</p></li>';
+                    document.getElementById(`lista_ssd`).innerHTML += '<li onclick="clicked(\'' + preco + '\',\'' + nome + '\',\'' + "ssd" + '\')" class="ssd"><p>' + nome + ' ' + '</p><p id=preco-peca> R$ ' + preco + '</p></li>';
                 }
             } else {
                 if (tagName == "ram") {
@@ -97,7 +97,7 @@ async function populateDropdown(JSON, tagName) {
                     const watts = JSON[i].watts;
                     nome = nome + " " + watts + "W";
                 }
-                document.getElementById(`lista_${tagName}`).innerHTML += '<li class="' + tagName + '"><p onclick="clicked(\'' + preco + '\',\'' + nome + '\',\'' + tagName + '\' ,\'' + rams + '\')">' + nome + '</p><p id=preco-peca> R$ ' + preco + '</p></li>';
+                document.getElementById(`lista_${tagName}`).innerHTML += '<li onclick="clicked(\'' + preco + '\',\'' + nome + '\',\'' + tagName + '\' ,\'' + rams + '\')" class="' + tagName + '"><p>' + nome + '</p><p id=preco-peca> R$ ' + preco + '</p></li>';
             }
         //}
     }
