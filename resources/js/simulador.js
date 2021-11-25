@@ -209,7 +209,7 @@ async function getCompatibility(productName, tagName) {
         url = "https://setupme.herokuapp.com/compatibility/" + tagName + "/" + productName;
         let returnJson = await getJson(url);
         console.log(returnJson);
-        populateDropdown(returnJson[0], "placa_mae");
+        populateDropdown(returnJson, "placa_mae");
     }
     if (tagName == "placa_mae") {
         url = "https://setupme.herokuapp.com/compatibility/placa_mae/" + productName;
@@ -222,13 +222,13 @@ async function getCompatibility(productName, tagName) {
         url = "https://setupme.herokuapp.com/compatibility/placa_video/" + productName;
         let returnJson = await getJson(url);
         //console.log(returnJson);
-        populateDropdown(returnJson[0], "fonte");
+        populateDropdown(returnJson, "fonte");
     }
     if (tagName == "fonte") {
         url = "https://setupme.herokuapp.com/compatibility/fonte/" + productName;
         let returnJson = await getJson(url);
         //console.log(returnJson);
-        populateDropdown(returnJson[0], "placa_video");
+        populateDropdown(returnJson, "placa_video");
     }
 }
 
