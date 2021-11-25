@@ -15,3 +15,7 @@
   - :speech_balloon: Felipe Verneck: [:computer: Github](https://github.com/FelipeVerneck)(FullStack)
 
   - :speech_balloon: Maxsuel: [:computer: Github](https://github.com/X86Max)(Frontend)
+
+## :man_student: Hospedado:
+  - [Front:](https://gaspor.github.io/setupMe/) Github Pages
+  - [Back:](setupme.herokuapp.com) Heroku
