@@ -50,6 +50,7 @@
 
 a:hover {
     transform: translateZ(20px);
+    cursor: pointer;
 }
 
 @keyframes scroll {

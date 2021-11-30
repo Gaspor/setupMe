@@ -1,0 +1,14 @@
+#container-footer {
+    background: rgba(128, 128, 128, 0.178);
+    width: 100%;
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#container-footer p{
+    text-align: center;
+    margin: .8rem 1rem .6rem 1rem;
+    font-weight: 500;
+}
