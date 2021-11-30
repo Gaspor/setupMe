@@ -57,7 +57,6 @@ async function setJson(url, tagName) {
 }
 
 async function populateDropdown(JSON, tagName) {
-    //console.log(JSON);
     for (let i = 0; i < JSON.length; i++) {
         if (tagName == "armazenamento") {
             if (!JSON[i].m2) {
@@ -208,26 +207,22 @@ async function getCompatibility(productName, tagName) {
     if (tagName == "processador" || tagName == "ram") {
         url = "https://setupme.herokuapp.com/compatibility/" + tagName + "/" + productName;
         let returnJson = await getJson(url);
-        console.log(returnJson);
         populateDropdown(returnJson, "placa_mae");
     }
     if (tagName == "placa_mae") {
         url = "https://setupme.herokuapp.com/compatibility/placa_mae/" + productName;
         let returnJson = await getJson(url);
-        //console.log(returnJson);
         populateDropdown(returnJson[0].processadores, "processador");
         populateDropdown(returnJson[0].rams, "ram");
     }
     if (tagName == "placa_video") {
         url = "https://setupme.herokuapp.com/compatibility/placa_video/" + productName;
         let returnJson = await getJson(url);
-        //console.log(returnJson);
         populateDropdown(returnJson, "fonte");
     }
     if (tagName == "fonte") {
         url = "https://setupme.herokuapp.com/compatibility/fonte/" + productName;
         let returnJson = await getJson(url);
-        //console.log(returnJson);
         populateDropdown(returnJson, "placa_video");
     }
 }

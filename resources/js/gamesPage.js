@@ -1,3 +1,47 @@
+const games = [
+    {
+        name: "Fortnite",
+        url: "https://setupme.herokuapp.com/games/fortnite"
+    },
+    {
+        name: "GTA V",
+        url: "https://setupme.herokuapp.com/games/gtav"
+    },
+    {
+        name: "Apex Legends",
+        url: "https://setupme.herokuapp.com/games/apex"
+    },
+    {
+        name: "League of Legends",
+        url: "https://setupme.herokuapp.com/games/lol"
+    },
+    {
+        name: "Valorant",
+        url: "https://setupme.herokuapp.com/games/valorant"
+    },
+    {
+        name: "CS:GO",
+        url: "https://setupme.herokuapp.com/games/csgo"
+    },
+    {
+        name: "Minecraft",
+        url: "https://setupme.herokuapp.com/games/minecraft"
+    },
+    {
+        name: "FIFA 21",
+        url: "https://setupme.herokuapp.com/games/fifa21"
+    },
+    {
+        name: "COD Warzone",
+        url: "https://setupme.herokuapp.com/games/cod"
+    },
+    {
+        name: "DOTA 2",
+        url: "https://setupme.herokuapp.com/games/dota2"
+    }, 
+    
+];
+
 function goGamePage(gameName) {
     sessionStorage.setItem('campo1', gameName);
     window.location.href = "gamesPage.html";
@@ -7,61 +51,34 @@ function goGamePage(gameName) {
 function loadPage() {
     let url;
     const gameName = sessionStorage.getItem('campo1');
-    document.getElementById("gameName").innerHTML = `Requisitos mínimos para jogar ${gameName}:`;
+    const requirements = document.getElementById("gameName");
+    const videoBoardMemory = document.getElementById("vm");
 
-    if (gameName == "Fortnite") {
-        url = "https://setupme.herokuapp.com/games/fortnite";
+    if (requirements && gameName) {
+        requirements.innerHTML = `Requisitos mínimos para jogar ${gameName}:`;
 
-    }
-    if (gameName == "GTA V") {
-        url = "https://setupme.herokuapp.com/games/gtav";
-
-    }
-    if (gameName == "Apex Legends") {
-        url = "https://setupme.herokuapp.com/games/apex";
-
-    }
-    if (gameName == "League of Legends") {
-        url = "https://setupme.herokuapp.com/games/lol";
-
-    }
-    if (gameName == "Valorant") {
-        url = "https://setupme.herokuapp.com/games/valorant";
+        for(i = 0; i < games.length; i++) {
+            if (gameName == games[i].name) {
+                url = games[i].url;
+        
+            }
+        }
+    
+        populateTable(url);
+    
+    } else if (videoBoardMemory) {
+        videoBoardMemory.innerHTML = `Impossível pegar os requisitos desse jogo!`;
 
     }
-    if (gameName == "CS:GO") {
-        url = "https://setupme.herokuapp.com/games/csgo";
-
-    }
-    if (gameName == "Minecraft") {
-        url = "https://setupme.herokuapp.com/games/minecraft";
-
-    }
-    if (gameName == "FIFA 21") {
-        url = "https://setupme.herokuapp.com/games/fifa21";
-
-    }
-    if (gameName == "COD Warzone") {
-        url = "https://setupme.herokuapp.com/games/cod";
-
-    }
-    if (gameName == "DOTA 2") {
-        url = "https://setupme.herokuapp.com/games/dota2";
-
-    }
-
-    showAll(url);
-
 }
 
 async function getInfo(url) {
         const response = await fetch(url)
         const itens = await response.json();
-        console.log(itens);
         return itens;
 }
 
-async function showAll(url) {
+async function populateTable(url) {
     const JSON = await getInfo(url);
     document.querySelector("#vb").innerHTML = `<div> Placa de vídeo: ${JSON[0].placa_video} </div>`;
     document.querySelector("#vm").innerHTML = `<div> Memória da placa de vídeo: ${JSON[0].video_memory} </div>`;
