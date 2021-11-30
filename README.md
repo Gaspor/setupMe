@@ -17,4 +17,4 @@
   - [Back:](https://setupme.herokuapp.com) Heroku
 
 
-[API](https://github.com/Gaspor/setupMe-api)
+[API - Github](https://github.com/Gaspor/setupMe-api)
