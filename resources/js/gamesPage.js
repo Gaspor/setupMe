@@ -1,10 +1,10 @@
 function goGamePage(gameName) {
     sessionStorage.setItem('campo1', gameName);
-    window.location.href = "./../../games-page.html";
+    window.location.href = "./../../gamesPage.html";
 
 }
 
-function loadPage() {
+/*function loadPage() {
     let url;
     const gameName = sessionStorage.getItem('campo1');
     document.getElementById("gameName").innerHTML = `Requisitos mínimos para jogar ${gameName}:`;
@@ -69,4 +69,4 @@ async function showAll(url) {
     document.querySelector("#ram").innerHTML = `<div> Memória RAM: ${JSON[0].ram} </div>`;
 }
 
-loadPage(); 
+loadPage(); */
