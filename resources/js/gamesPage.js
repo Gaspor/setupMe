@@ -1,6 +1,6 @@
 function goGamePage(gameName) {
     sessionStorage.setItem('campo1', gameName);
-    window.location.href = "./../../gamesPage.html";
+    window.location.href = "./../../games-page.html";
 
 }
 
